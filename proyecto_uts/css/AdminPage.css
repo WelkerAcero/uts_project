@@ -1,0 +1,49 @@
+body{
+    background: #E9ECF4;
+    color: #000;
+}
+
+.contenedor{
+    display:flex;
+    text-align: center;
+    
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3, auto);
+
+
+
+    grid-template-areas:"titulo titulo titulo titulo"
+                        "contenido-1 contenido-1 contenido-2 contenido-2";
+
+}                       
+
+.contenedor .titulo{
+    grid-area:titulo;
+    margin-left:100px
+}
+
+.contenedor .contenido_linea_1{
+    grid-area:contenido-1;
+
+}
+
+.contenedor .contenido_linea_2{
+    grid-area:contenido-2;
+
+}
+
+.img:hover{
+    width:305px;
+    height:310px;
+}
+
+.img2:hover{
+    width:410px;
+}

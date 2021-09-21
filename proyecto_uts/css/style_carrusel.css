@@ -1,0 +1,54 @@
+.contenedor-dad {
+  width: 100%;
+  max-width: 1500px;
+}
+
+.contenedor-padre #slider {
+  grid-area: slider;
+  box-shadow: 0px 10px 10px black;
+}
+
+.texto-1slider {
+  text-align: justify;
+}
+
+.extension {
+  color: black;
+  margin-top: -600px;
+  font-size: 35px;
+}
+
+.texto-2slider {
+  background: black;
+  opacity: 0.7;
+  border-radius: 15px;
+}
+
+.texto-2slider h1 {
+  padding-top: 15px;
+}
+
+.texto-2slider h2 {
+  font-size: 23px;
+  text-align: justify;
+  padding: 13px;
+}
+
+#fan-page:hover span {
+  color: green;
+}
+
+@media screen and (max-width: 768px) {
+  .texto-1slider h1{
+    font-size: 24px;
+  }
+  .texto-2slider h1 {
+    font-size: 17px;
+  }
+  .texto-2slider h2 {
+    font-size: 17px;
+  }
+  .contacto-extension h1, .contacto-extension h2{
+    font-size: 20px;
+  }
+}
