@@ -1,6 +1,7 @@
 <?php
 
-$servidor = "mysql:dbname=uts_project;host=127.0.0.1";
+
+$servidor = "mysql:dbname=uts_project;host=127.0.0.1"; // Cambiar al momento de subirlo a production
 $usuario = "root";
 $password = "";
 

@@ -1,6 +1,8 @@
 <?php
 require_once "conexion.php";
-$conexion = conexion();
+//Al entrar a esta carpeta, esta linea 'conexion();' salta error,
+//pero de igual forma sigue funcionando el actualizar correctamente.
+$conexion = conexion(); 
 
 $id = $_POST['contact_id'];
 $a = $_POST['contact_name'];

@@ -2,39 +2,50 @@
 
 session_start();
 
+$message = '';
+
 if (isset($_SESSION['user_id'])) {
-  header('Location: /proyecto/adminPage.php');
+    header('Location: ../adminPage.php');
 }
 require 'database.php';
 
-if (!empty($_POST['email']) && !empty($_POST['password'])) {
+//IF EN BUSCA DE ERRORES 'COUNT() PARAMETER'
+if (!empty($_POST['email'])) {
+    @$findError = $_POST['email'];
+    ini_set('error_reporting', E_ALL | E_NOTICE | E_STRICT);
+    ini_set('display_errors', '0');
+    ini_set('track_errors', 'On');
+    if (!$findError) {
+        $message = "Ha ocurrido un error en el sistema";
+    } else if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
-  $verify = strpos($_POST['email'],'@');
-  if ($verify === False){
+        $verify = strpos($_POST['email'], '@');
+        if ($verify === false) {
 
-    $message = "Campo 'Email' debe contener '@' y no fue encontrado.\n Intente nuevamente";
+            $message = "Campo 'Email' debe contener '@' y no fue encontrado.\n Intente nuevamente";
 
-  }else{
+        } else {
 
-    $records = $conn->prepare('SELECT id, email, password FROM users WHERE email = :email');
-    $records->bindParam(':email', $_POST['email']);
-    $records->execute();
-    $results = $records->fetch(PDO::FETCH_ASSOC);
-  
-    $message = '';
-  
-    if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
-      $_SESSION['user_id'] = $results['id'];
-      header("Location: /proyecto/adminPage.php");
-    } else {
-      $message = 'Estas credenciales no son validas, intente nuevamente';
+            $records = $conn->prepare('SELECT id, email, password FROM users WHERE email = :email');
+            $records->bindParam(':email', $_POST['email']);
+            $records->execute();
+            $results = $records->fetch(PDO::FETCH_ASSOC);
+
+            if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
+                $_SESSION['user_id'] = $results['id'];
+                header("Location: ../adminPage.php");
+            } else {
+                $message = 'Estas credenciales no son validas, intente nuevamente';
+            }
+
+        }
+
+    } else if (empty($_POST['password']) && !empty($_POST['email'])) {
+        $message = 'Por favor llene los campos requeridos';
     }
 
-  }
-
-}else if(empty($_POST['password']) && !empty($_POST['email'])){
-  $message = 'Por favor llene los campos requeridos';
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -49,11 +60,11 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 </head>
 
 <body>
-  <?php require 'partials/header.php' ?>
+  <?php require 'partials/header.php'?>
 
-  <?php if (!empty($message)) : ?>
-    <h3 style="color:red; background-color:yellow"> <?= $message ?><h3>
-  <?php endif; ?>
+  <?php if (!empty($message)): ?>
+    <h3 style="color:red; background-color:yellow"> <?=$message?><h3>
+  <?php endif;?>
 
   <h1>Iniciar sesión administrador</h1>
 

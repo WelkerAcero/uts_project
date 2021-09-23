@@ -43,11 +43,11 @@ if (isset($_SESSION['user_id'])) {
       <hr>
 
     <?php } else {
-      header('Location: /proyecto/php-login/login.php');
+      header('Location: /proyecto_uts/php-login/login.php');
     }
     ?>
 
-    <a class="evento" href="http://localhost/proyecto/php-login/logout.php" onclick="return Confirmar('¿Realmente deseas cerrar sesión?');">
+    <a class="evento" href="http://localhost/ProyectoSitioWeb_UTS/proyecto_uts/php-login/logout.php" onclick="return Confirmar('¿Realmente deseas cerrar sesión?');">
       <b>Cerrar Sesión</b>
     </a>
 
