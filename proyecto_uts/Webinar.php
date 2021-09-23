@@ -13,7 +13,7 @@
     <div class="contenedor">
 
         <header class="header">
-            <h1>Comienzo de WEBINAR Anggie</h1>
+            <h1>RAMA EXPERIMENTAL de WEBINAR Anggie</h1>
             <div class="menu">
                 <nav>
                     <ul>
