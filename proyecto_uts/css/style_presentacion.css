@@ -1,0 +1,114 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  /*border: 2px solid yellow;*/
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+  
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background: white;
+  color: black;
+  max-width: 1300px;
+  width: 100%;
+}
+
+.contenedor_padre_presentacion {
+  width: 100%;
+  margin: 5px auto;  
+  display: grid;
+  grid-gap:10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4 auto);
+  grid-template-areas:"header_presentacion header_presentacion header_presentacion header_presentacion" 
+                      "carrusel carrusel carrusel carrusel" 
+                      "politicas politicas politicas politicas"
+                      "educacion proyeccion emprendimiento graduados" 
+                      "footer footer footer footer";
+}
+
+/*====================================================== GRID HEADER ==========================================================*/
+.contenedor_padre_presentacion>div, .contenedor_padre_presentacion .header, .contenedor_padre_presentacion .carrusel{
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+/*=============================================================================================================================*/
+
+.contenedor_padre_presentacion .desplegable_educacion, .contenedor_padre_presentacion .desplegable_proyeccion, .contenedor_padre_presentacion .desplegable_emprendimiento, .contenedor_padre_presentacion .desplegable_graduados {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor_padre_presentacion .header_presentacion {
+  grid-area: header_presentacion;
+  width: 100%;
+}
+
+.contenedor_padre_presentacion .carrusel {
+  max-width: 100%;
+  grid-area: carrusel;
+}
+
+.contenedor_padre_presentacion .politicas{
+  grid-area: politicas;
+  width: 99%;
+}
+
+.contenedor_padre_presentacion .desplegable_educacion {
+  grid-area: educacion;
+}
+
+.contenedor_padre_presentacion .desplegable_proyeccion {
+  grid-area: proyeccion;
+}
+
+.contenedor_padre_presentacion .desplegable_emprendimiento {
+  grid-area: emprendimiento;
+}
+
+.contenedor_padre_presentacion .desplegable_graduados {
+  grid-area: graduados;
+}
+
+.contenedor_padre_presentacion .footer_presentacion{
+  grid-area: footer;
+  width: 100%;
+}
+/*====================================================== CARRUSEL ==========================================================*/
+
+.imagen-titulo-carrusel {
+  background-image: url("../img/ban1.png");
+  background-size: cover;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+/*====================================================== FOOTER ==========================================================*/
+
+
+/*====================================================== QUERY ==========================================================*/
+
+@media screen and (max-width: 768px) {
+  .contenedor_padre_presentacion {
+    grid-template-areas: "header_presentacion header_presentacion header_presentacion header_presentacion" 
+                          "carrusel carrusel carrusel carrusel" 
+                          "politicas politicas politicas politicas"
+                          "educacion  educacion proyeccion proyeccion" 
+                          "emprendimiento emprendimiento graduados graduados"
+                          "footer footer footer footer";
+  }
+  
+}
+

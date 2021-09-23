@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    /**box-sizing: border-box;**/
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background: #E9ECF4;
+    color: #000;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/*====================================================== GRID ==========================================================*/
+
+.contenedor {
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "header header header header" "contenido contenido contenido sidebar" "carrusel carrusel carrusel sidebar" "contenido_2 contenido_2 contenido_2 sidebar" "imagen-1 imagen-1 imagen-1 imagen-1" "footer footer footer footer";
+}
+
+.contenedor>div, .contenedor .header, .contenedor .contenido, .contenido .sidebar, .contenido .footer {
+    background: #fff;
+    padding-bottom: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header {
+    color: #fff;
+    grid-area: header;
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+    margin-left: 15px;
+}
+
+.contenedor .carrusel {
+    grid-area: carrusel;
+    margin-left: 15px;
+}
+
+.contenedor .contenido_2 {
+    grid-area: contenido_2;
+    margin-left: 15px;
+}
+
+.contenedor .sidebar {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar;
+    background: #E4E3E1;
+}
+
+.contenedor .imagen-1 {
+    background: rgb(9,111,121);
+    background: whitesmoke;
+    border-radius:40px 0px 40px 0px;
+    border:1px solid black;
+}
+
+.contenedor .imagen-1 {
+    grid-area: imagen-1;
+}
+
+.contenedor .footer {
+    color: #fff;
+    grid-area: footer
+}
+
+/*====================================================== QUERY ==========================================================*/
+
+@media screen and (max-width:768px) {
+    .contenedor {
+        grid-template-areas: "header header header header" 
+                            "contenido contenido contenido contenido"
+                            "carrusel carrusel carrusel carrusel" 
+                            "contenido_2 contenido_2 contenido_2 contenido_2" 
+                            "sidebar sidebar sidebar sidebar "
+                            "imagen-1 imagen-1 imagen-1 imagen-1" 
+                            "footer footer footer footer";
+    }
+    .contenedor .sidebar {
+        margin-right: 0px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .map {
+        width: 100%;
+        max-width: 100%;
+    }
+    .uts-imagen-calidad {
+        width: 50%;
+        text-align: center;
+    }
+    .contenedor .contenido {
+        text-align: justify;
+        margin: 10px;
+    }
+    .contenedor .carrusel {
+        margin: 5px;
+    }
+    .contenedor .contenido_2 {
+        text-align: justify;
+        margin: 10px;
+    }
+}
+
+;

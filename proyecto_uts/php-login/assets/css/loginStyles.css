@@ -1,0 +1,59 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Noto Serif', serif;
+    text-align: center;
+    background: url(https://tributaryassistanceexperts.com/wp-content/uploads/2016/09/White-Abstract-2015.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*ESTILOS PARA LOGIN.PHP*/
+input[type="text"], input[type="password"]{
+    outline: none;
+    padding: 15px;
+    display: block;
+    width: 320px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    margin: 20px auto;
+    font-size: 18px;
+
+}
+
+input[type="submit"]{
+    padding: 10px;
+    color: #fff;
+    background:#0B0B60;
+    width:360px;
+    margin:20px auto;
+    margin-top:0;
+    border: 0;
+    border-radius:3px;
+    cursor: pointer; /*Utilizado para cambiar el tipo de cursor al pararse sobre el objeto*/
+    font-size: 18px;
+}
+
+input[type="submit"]:hover { /*Al momento de pasar el puntero sobre Send, este cambia de color con esta caracteristica :hover */
+    background-color: #3D92D5;
+}
+/*FIN DE ESTILOS PARA LOGIN.PHP*/
+
+/*Al terminar aqui ir a index.php y agregar una cabezera. luego de agregarla agregarle estilos aqui*/
+header {
+    border-bottom: 2px  solid #eee;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #000004, #07051b, #0a092a, #070d3b, #050e4b, #08185c, #0a236e, #092e80, #0c4797, #175fad, #2878c1, #3d92d5);
+}
+
+header a { 
+    text-decoration: none;
+    color: #333;
+}
+/*Luego de esto ir a index.php donde esta el header y copiar todo el Header, y meterlos dentro de la carpeta Partials,
+un archivo llamado 'header'*/
+
+
