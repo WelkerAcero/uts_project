@@ -343,7 +343,7 @@
                             
                             <div style="margin:13px; padding-top:20px;">
                                 <div>Webinar,Diplomados,Cursos</div>
-                                <a href="Webinar.php"><button type="button" class="btn btn-primary btn-block">Acceder</button></a>
+                                <a href="Webinar.php" target=”_blank”><button type="button" class="btn btn-primary btn-block">Acceder</button></a>
                             </div>
                             
                         </div>
@@ -351,7 +351,7 @@
                         <div>
                             <div style="margin:20px;">
                                 <div>Podcast-Extiéndete</div>
-                                <a href="#"><button type="button" class="btn btn-primary btn-block">Acceder</button></a>
+                                <a href="podcast.php" target=”_blank”><button type="button" class="btn btn-primary btn-block">Acceder</button></a>
                             </div>
                         </div>
                     </div>
