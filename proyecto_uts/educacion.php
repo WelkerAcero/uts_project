@@ -340,24 +340,18 @@
                 <div class="tab-pane fade" id="nav-programas" role="tabpanel" aria-labelledby="nav-programas-tab" style="text-align:center; width:100%;">
                     <div class="contenedor-programas" style="display:flex; flex-direction:column;">
                         <div style="display:flex; flex-direction:row; margin:10px;">
+                            
                             <div style="margin:13px; padding-top:20px;">
-                                <div>Webinar</div>
-                                <a href="#"><button type="button" class="btn btn-primary">Acceder</button></a>
+                                <div>Webinar,Diplomados,Cursos</div>
+                                <a href="Webinar.php"><button type="button" class="btn btn-primary btn-block">Acceder</button></a>
                             </div>
-                            <div style="margin:13px; padding-top:20px;">
-                                <div>Diplomados</div>
-                                <a href="#"><button type="button" class="btn btn-primary">Acceder</button></a>
-                            </div>
-                            <div style="margin:13px; padding-top:20px;">
-                                <div>Cursos</div>
-                                <a href="#"><button type="button" class="btn btn-primary">Acceder</button></a>
-                            </div>
+                            
                         </div>
 
                         <div>
                             <div style="margin:20px;">
                                 <div>Podcast-Extiéndete</div>
-                                <a href="#"><button type="button" class="btn btn-primary">Acceder</button></a>
+                                <a href="#"><button type="button" class="btn btn-primary btn-block">Acceder</button></a>
                             </div>
                         </div>
                     </div>
