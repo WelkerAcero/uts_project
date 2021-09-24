@@ -401,7 +401,7 @@
                                 <br>
                                 <h1 class="fondo-info2-h1-title">
                                     <b>Beneficios</b> <br>
-                                    Gracias al convenio con Basics, todos los estudiantes y egresados de las Unidades Tecnológicas de Santander tienen un descuento de -40% en los Planes PRO de 1 mes, y -50% en los planes PRO de 2 meses.
+                                    Gracias al convenio con Basics, todos los egresados y graduados de las Unidades Tecnológicas de Santander tienen un descuento de -40% en los Planes PRO de 1 mes, y -50% en los planes PRO de 2 meses.
                                 </h1>
                                 <br>
                                 <h1 class="fondo-info2-h1-title">
