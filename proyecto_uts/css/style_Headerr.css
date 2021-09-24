@@ -1,8 +1,10 @@
 * {
   margin: 0px;
   padding: 0px;
-  /*border: 2px solid yellow;*/
+  /* border: 2px solid yellow; */
   box-sizing: border-box;
+  overflow-wrap: auto;
+  font-family: 'Playfair Display', serif;
 }
 
 body {
@@ -10,17 +12,17 @@ body {
   margin: 0px;
   background: white;
   color: black;
-  max-width: 1300px;
-  width: 100%;
+  max-width: 100%;
 }
 
 /*==================================================== MENU ============================================================*/
 
 .contenedor-menu {
-  max-width: 1320px;
+  max-width: 100%;
+  width: 100%;  
   margin: -20px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   justify-content:center;
   justify-items: center;
 }
@@ -100,7 +102,7 @@ body {
 
 .contenedor-login {
   text-align: center;
-  margin-right:15px;
+  margin-right:95px;
 }
 
 .contenedor-login>h4 {
@@ -109,7 +111,7 @@ body {
 }
 
 .icono-login {
-  margin: 30px 30px;
+  margin: 30px 0px;
   width: 97px;
   height: 97px;
 }

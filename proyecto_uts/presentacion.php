@@ -24,7 +24,7 @@
 </head>
 
 <body>
-  <div class="contenedor_padre_presentacion ">
+  <div class="contenedor_padre_presentacion">
 
     <!-- ================================================================ SECCIÓN MENÚ ====================================================================== -->
     <header class="header_presentacion">

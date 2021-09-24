@@ -4,7 +4,7 @@
   /*border: 2px solid yellow;*/
   box-sizing: border-box;
   font-family: 'Playfair Display', serif;
-  
+  overflow-wrap: auto;
 }
 
 body {
@@ -12,15 +12,15 @@ body {
   margin: 0px;
   background: white;
   color: black;
-  max-width: 1300px;
-  width: 100%;
+  max-width: 100%;
 }
 
 .contenedor_padre_presentacion {
-  width: 100%;
-  margin: 5px auto;  
-  display: grid;
-  grid-gap:10px;
+  max-width: 100%;
+  width: 100%;  
+  margin: 1px auto;  
+  display: grid; 
+  grid-gap: 30px 0px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4 auto);
   grid-template-areas:"header_presentacion header_presentacion header_presentacion header_presentacion" 
@@ -33,7 +33,7 @@ body {
 /*====================================================== GRID HEADER ==========================================================*/
 .contenedor_padre_presentacion>div, .contenedor_padre_presentacion .header, .contenedor_padre_presentacion .carrusel{
   background: white;
-  padding: 20px;
+  padding: 0px;
   border-radius: 4px;
 }
 
@@ -92,7 +92,7 @@ body {
   justify-content: center;
   margin-top: -20px;
   margin-left: -20px;
-  margin-right: -20px;
+  margin-right: 0px;
 }
 
 /*====================================================== FOOTER ==========================================================*/
