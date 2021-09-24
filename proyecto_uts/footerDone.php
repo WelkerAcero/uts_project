@@ -52,10 +52,10 @@
                 </div>
 
                 <div class="contenedor-redes-sociales">
-                    <h3 style="
+                    <h2 style="
           background: linear-gradient(green,rgb(0, 255, 115));
          -webkit-background-clip: text;
-          color: transparent;">REDES SOCIALES</h3>
+          color: transparent;">REDES SOCIALES</h2>
                     <br>
                     <a class="red" href="https://www.facebook.com/UnidadesTecnologicasdeSantanderUTS/?epa=SEARCH_BOX" target="_blank" title="Facebook"><img class="imagen-red" style="width:40px;" src="img/facebook.png"></a>
                     <a class="red" href="https://www.youtube.com/channel/UC-rIi4OnN0R10Wp-cPiLcpQ" target="_blank" title="Youtube"><img class="imagen-red" style="width:40px;" src="img/youtube.png"></a>

@@ -197,17 +197,37 @@ body {
   transition-duration: 0.8s;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 667px) {
 
   /*====================================================== QUERY - MENÚ ==========================================================*/
-  .contenedor-menu {
+  .contenedor-menu, .logouts {
+    max-width:667px;
+    width:667px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
+
   .contenedor-menu .logouts {
-    width: 80%;
+    max-width:667px;
+    width: 60%;
+    background: black;
+    opacity: 0.6;
+    border-radius: 15px;
+    padding-left:60px;
+    padding-right:60px;
+    margin-left:-5%;
+    margin-right:80px;
+    margin-top:10px;
+    margin-bottom:5px;
+  }
+
+  .contenedor-padre .icono-login, h4{
+    margin-left:-50%;
+  }
+
+  .nav-bar{
+    margin-left:-8%;
   }
   /*====================================================== QUERY - FOOTER ==========================================================*/
   .contenedor-padre .footer {
@@ -226,4 +246,7 @@ body {
     display: flex;
     flex-direction: column;
   }
+
+  
+
 }

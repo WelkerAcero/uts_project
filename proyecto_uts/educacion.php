@@ -340,24 +340,18 @@
                 <div class="tab-pane fade" id="nav-programas" role="tabpanel" aria-labelledby="nav-programas-tab" style="text-align:center; width:100%;">
                     <div class="contenedor-programas" style="display:flex; flex-direction:column;">
                         <div style="display:flex; flex-direction:row; margin:10px;">
+                            
                             <div style="margin:13px; padding-top:20px;">
-                                <div>Webinar</div>
-                                <a href="#"><button type="button" class="btn btn-primary">Acceder</button></a>
+                                <div>Webinar,Diplomados,Cursos</div>
+                                <a href="Webinar.php" target=”_blank”><button type="button" class="btn btn-primary btn-block">Acceder</button></a>
                             </div>
-                            <div style="margin:13px; padding-top:20px;">
-                                <div>Diplomados</div>
-                                <a href="#"><button type="button" class="btn btn-primary">Acceder</button></a>
-                            </div>
-                            <div style="margin:13px; padding-top:20px;">
-                                <div>Cursos</div>
-                                <a href="#"><button type="button" class="btn btn-primary">Acceder</button></a>
-                            </div>
+                            
                         </div>
 
                         <div>
                             <div style="margin:20px;">
                                 <div>Podcast-Extiéndete</div>
-                                <a href="#"><button type="button" class="btn btn-primary">Acceder</button></a>
+                                <a href="podcast.php" target=”_blank”><button type="button" class="btn btn-primary btn-block">Acceder</button></a>
                             </div>
                         </div>
                     </div>
@@ -401,7 +395,7 @@
                                 <br>
                                 <h1 class="fondo-info2-h1-title">
                                     <b>Beneficios</b> <br>
-                                    Gracias al convenio con Basics, todos los estudiantes y egresados de las Unidades Tecnológicas de Santander tienen un descuento de -40% en los Planes PRO de 1 mes, y -50% en los planes PRO de 2 meses.
+                                    Gracias al convenio con Basics, todos los egresados y graduados de las Unidades Tecnológicas de Santander tienen un descuento de -40% en los Planes PRO de 1 mes, y -50% en los planes PRO de 2 meses.
                                 </h1>
                                 <br>
                                 <h1 class="fondo-info2-h1-title">

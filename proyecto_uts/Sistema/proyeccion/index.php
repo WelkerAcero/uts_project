@@ -66,7 +66,7 @@ require 'proceso.php';
                                 <br>
 
                                 <label for="date">Fecha de publicación:</label><br>
-                                <input type="text" name="fecha" value="<?="\t\tFecha de publicación: ".date('Y-m-d H:i:s');?>"><br>
+                                <input type="text" name="fecha" value="<?=date('Y-m-d');?>"><br>
                             
                             </div>
                         </div>

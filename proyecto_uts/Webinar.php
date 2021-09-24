@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/webinar.css">
-    <title>Document</title>
-</head>
-
-<body>
-
-    <div class="contenedor">
-
-        <header class="header">
-
-=======
     <title>Programas</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
@@ -50,7 +35,6 @@
 
         <header class="header">
             <h1>RAMA EXPERIMENTAL de WEBINAR Anggie</h1>
->>>>>>> a037d56e5b7743e5bf3cf93a087ec41deaaa7807
             <div class="menu">
                 <nav>
                     <ul>
@@ -118,12 +102,6 @@
             </div>
 
 
-<<<<<<< HEAD
-        <footer class="footer_webinar">
-            <h3>Footer</h3>
-        </footer>
-
-=======
         <!-- ================================================================ SECCIÓN FOOTER ====================================================================== -->
 
         <footer class="footer_presentacion">
@@ -131,7 +109,6 @@
         include("footerDone.php");
         ?>
         </footer>
->>>>>>> a037d56e5b7743e5bf3cf93a087ec41deaaa7807
     </div>
 
 </body>

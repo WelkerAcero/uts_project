@@ -99,10 +99,13 @@ require("Sistema/procesoInsertProyeccion.php");
                         <table class="">
                             <thead class="thead-dark">
                                 <tr>
-
+                                   <div style="display:flex; justify-content:space-evenly;">
+                                        <h3>Proyecto ejecutado #<?php echo $i++;?></h3>
+                                        <h3 style="color:goldenrod"><?php echo "Fecha de publicación: ".$project['Fecha'];?></h3>
+                                   </div>
                                 </tr>
                             </thead>
-                            <h2 style="margin:10px 40px">Proyecto ejecutado <?php echo $i++;?>  <p><?php echo $project['Fecha']?></p></h2>
+                            
                             <tr style="border-top:2px solid black; border-bottom:2px solid black; padding:0px -40px">
                                 <td><img style="margin:20px 40px" class="img-thumbnail" width="100%" src="Sistema/Imagenes/<?php echo $project['Foto']; ?>" /></td>
                                 <td width="60%">
