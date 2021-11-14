@@ -5,45 +5,42 @@ session_start();
 $message = '';
 
 if (isset($_SESSION['user_id'])) {
-    header('Location: ../adminPage.php');
+  header('Location: ../adminPage.php');
 }
+
 require 'database.php';
 
 //IF EN BUSCA DE ERRORES 'COUNT() PARAMETER'
-if (!empty($_POST['email'])) {
-    @$findError = $_POST['email'];
+if (!empty($_POST['email']) && strpos($_POST['email'], ' ')) {
     ini_set('error_reporting', E_ALL | E_NOTICE | E_STRICT);
     ini_set('display_errors', '0');
     ini_set('track_errors', 'On');
-    if (!$findError) {
-        $message = "Ha ocurrido un error en el sistema";
-    } else if (!empty($_POST['email']) && !empty($_POST['password'])) {
+    $message = "Asegurese de que no hayan espacios en el campo Email";
 
-        $verify = strpos($_POST['email'], '@');
-        if ($verify === false) {
+} else if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
-            $message = "Campo 'Email' debe contener '@' y no fue encontrado.\n Intente nuevamente";
+    $verify = strpos($_POST['email'], '@');
+    if ($verify === false) {
+        $message = "Campo 'Email' debe contener '@' y no fue encontrado.\n Intente nuevamente";
+    } else {
 
+        $records = $conn->prepare('SELECT id, email, password FROM users WHERE email = :email');
+        $records->bindParam(':email', $_POST['email']);
+        $records->execute();
+        $results = $records->fetch(PDO::FETCH_ASSOC);
+
+        if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
+            $_SESSION['user_id'] = $results['id'];
+            $_SESSION['login_date'] = time();
+            header("Location: ../adminPage.php");
         } else {
-
-            $records = $conn->prepare('SELECT id, email, password FROM users WHERE email = :email');
-            $records->bindParam(':email', $_POST['email']);
-            $records->execute();
-            $results = $records->fetch(PDO::FETCH_ASSOC);
-
-            if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
-                $_SESSION['user_id'] = $results['id'];
-                header("Location: ../adminPage.php");
-            } else {
-                $message = 'Estas credenciales no son validas, intente nuevamente';
-            }
-
+            $message = 'Estas credenciales no son válidas, intente nuevamente';
         }
 
-    } else if (empty($_POST['password']) && !empty($_POST['email'])) {
-        $message = 'Por favor llene los campos requeridos';
     }
 
+} else if (empty($_POST['password']) && !empty($_POST['email'])) {
+    $message = 'Por favor llene los campos requeridos';
 }
 
 ?>

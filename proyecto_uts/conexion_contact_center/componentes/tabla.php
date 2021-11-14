@@ -1,7 +1,8 @@
 <?php
 session_start();
-require_once "../php/conexion.php";
-$conexion = conexion();
+require_once "../../conexion/conexion.php";
+$con = new Conexion();
+$conexion = $con->conectar();
 
 ?>
 <div class="row">
@@ -19,6 +20,7 @@ $conexion = conexion();
 				<td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>NOMBRE</b></td>
 				<td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>EMAIL</b></td>
 				<td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>CELULAR</b></td>
+				<td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>FECHA DEL REGISTRO</b></td>
 
 				<td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>EDITAR</b></td>
 				<td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>ELIMINAR</b></td>
@@ -40,7 +42,7 @@ $conexion = conexion();
 			$result = mysqli_query($conexion, $sql);
 			while ($ver = mysqli_fetch_row($result)) {
 
-				$datos = $ver[0] . "||" . $ver[1] . "||" . $ver[2] . "||" . $ver[3];
+				$datos = $ver[0] . "||" . $ver[1] . "||" . $ver[2] . "||" . $ver[3] . "||" . $ver[4];
 
 			?>
 
@@ -48,6 +50,9 @@ $conexion = conexion();
 					<td><?php echo $ver[1] ?></td>
 					<td><?php echo $ver[2] ?></td>
 					<td><?php echo $ver[3] ?></td>
+					<td><?php echo $ver[4] ?></td>
+
+					
 					<td>
 						<button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos ?>')">
 

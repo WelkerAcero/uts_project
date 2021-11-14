@@ -343,7 +343,7 @@
                             
                             <div style="margin:13px; padding-top:20px;">
                                 <div>Webinar,Diplomados,Cursos</div>
-                                <a href="Webinar.php" target=”_blank”><button type="button" class="btn btn-primary btn-block">Acceder</button></a>
+                                <a href="programas.php" target=”_blank”><button type="button" class="btn btn-primary btn-block">Acceder</button></a>
                             </div>
                             
                         </div>
@@ -465,6 +465,7 @@
                                                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon fa-3x"></i></span>
                                                 <div class="col-md-9">
                                                     <b> Teléfono:</b><input id="phone" name="phone" type="text" placeholder="Digitar teléfono/celular" required class="form-control">
+                                                    <input id="date" name="date" type="text" hidden="true" value="<?=date('Y-m-d')?>" required class="form-control">
                                                 </div>
                                             </div>
                                             <br>

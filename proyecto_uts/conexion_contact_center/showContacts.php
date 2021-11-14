@@ -1,5 +1,5 @@
 <?php
-include('conexion.php');
+include("../conexion/conexion.php");
 ?>
 
 <div class="row">
@@ -15,9 +15,10 @@ include('conexion.php');
             <thead>
                 <tr>
                     <td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>NOMBRE</b></td>
-                    <td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>Email</b></td>
+                    <td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>EMAIL</b></td>
                     <td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>CELULAR</b></td>
-
+                    <td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>FECHA DEL REGISTRO</b></td>
+                    
                     <td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>EDITAR</b></td>
                     <td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>ELIMINAR</b></td>
                 </tr>
@@ -37,14 +38,14 @@ include('conexion.php');
                 }
 
                 //se crea una instancia
-                $student = new conexion();
+                $student = new Conexion();
                 //se llama a la función leer_proveedor() y se guardar en la varibale
                 $listado = $student->leer_contact();
 
                 //se realiza el while y se recorren los registros y se guarda en $row
                 while ($ver = mysqli_fetch_row($listado)) {
                     //se descomponen los campos de la tabla y se guanda en variables
-                    $datos = $ver[0] . "||" . $ver[1] . "||" . $ver[2] . "||" . $ver[3];
+                    $datos = $ver[0] . "||" . $ver[1] . "||" . $ver[2] . "||" . $ver[3] . "||" . $ver[4];
 
                 ?>
                     <!--se IMPRIME LAS FILAS Y COLUMNAAS CON LOS DATOS DE LA CONSULTA-->
@@ -52,6 +53,7 @@ include('conexion.php');
                         <td><?php echo $ver[1]; ?></td>
                         <td><?php echo $ver[2]; ?></td>
                         <td><?php echo $ver[3]; ?></td>
+                        <td><?php echo $ver[4]; ?></td>
                         <td>
                             <button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos ?>')">
 

@@ -1,8 +1,6 @@
 <?php
 
-
-require("Sistema/conexion/conexion.php");
-require("Sistema/procesoInsertProyeccion.php");
+require("conexion/conexion.php");
 
 ?>
 
@@ -87,11 +85,13 @@ require("Sistema/procesoInsertProyeccion.php");
             <img class="uts-imagen-calidad" src="img/uts-vision.jpg" width="100%">
         </aside>
 
-
-
         <div class="imagen-1">
 
             <?php
+            
+            $stablish = new Conexion();
+            $listaproyeccion = $stablish->leer_proyeccion();
+
             $i = 1;
             foreach ($listaproyeccion as $project) { ?>
                 <div class="row">

@@ -15,7 +15,10 @@ $accionAgregar = "";
 $accionModificar = $accionEliminar = $accionCancelar = "disabled";
 $mostrarModal = false;
 
-include("../conexion/conexion.php");
+include("../../conexion/conexion.php");
+$con = new Conexion();
+$pdo = $con->conectarseMetodo_2(); //$pdo guarda la conexion. Luego $pdo procesa el metodo conectar 2
+                                   //$pdo es usado de ahora en adelante para sentencias prepareSQL
 
 switch ($accion) {
     case "btnAgregar":

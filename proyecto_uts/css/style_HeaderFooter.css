@@ -213,13 +213,7 @@ body {
     width: 60%;
     background: black;
     opacity: 0.6;
-    border-radius: 15px;
-    padding-left:60px;
-    padding-right:60px;
-    margin-left:-5%;
-    margin-right:80px;
-    margin-top:10px;
-    margin-bottom:5px;
+
   }
 
   .contenedor-padre .icono-login, h4{

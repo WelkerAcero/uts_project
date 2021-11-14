@@ -1,9 +1,10 @@
 
 
-function agregardatos(contact_name, contact_email, contact_cellphone) {
+function agregardatos(contact_name, contact_email, contact_cellphone, recorded_date) {
 	cadena = "contact_name=" + contact_name +
 		"&contact_email=" + contact_email +
-		"&contact_cellphone=" + contact_cellphone;
+		"&contact_cellphone=" + contact_cellphone +
+		"&recorded_date=" + recorded_date;
 
 	$.ajax({
 		type: "POST",
@@ -30,6 +31,7 @@ function agregaform(datos) {
 	$('#contact_nameUpdate').val(d[1]);
 	$('#contact_emailUpdate').val(d[2]);
 	$('#contact_cellphoneUpdate').val(d[3]);
+	$('#recorded_dateUpdate').val(d[4]);
 
 
 }
@@ -40,11 +42,13 @@ function actualizaDatos() {
 	contact_name = $('#contact_nameUpdate').val();
 	contact_email = $('#contact_emailUpdate').val();
 	contact_cellphone = $('#contact_cellphoneUpdate').val();
+	recorded_date = $('#recorded_dateUpdate').val();
 
 	cadena = "contact_id=" + contact_id +
 		"&contact_name=" + contact_name +
 		"&contact_email=" + contact_email +
-		"&contact_cellphone=" + contact_cellphone;
+		"&contact_cellphone=" + contact_cellphone +
+		"&recorded_date=" + recorded_date;
 
 	$.ajax({
 		type: "POST",

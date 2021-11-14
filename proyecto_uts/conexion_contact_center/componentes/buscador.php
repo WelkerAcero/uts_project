@@ -1,9 +1,8 @@
 <?php
-require_once "../php/conexion.php";
-$conexion = conexion();
+require_once "../../conexion/conexion.php";
+$conexion = new Conexion();
 
-$sql = "SELECT * from contact_center";
-$result = mysqli_query($conexion, $sql);
+$result = $conexion->leer_contact();
 
 ?>
 <br><br>

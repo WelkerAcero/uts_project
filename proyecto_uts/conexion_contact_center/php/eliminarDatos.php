@@ -1,7 +1,8 @@
 
 <?php
-require_once "conexion.php";
-$conexion = conexion();
+require_once "../../conexion/conexion.php";
+$con = new Conexion();
+$conexion = $con->conectar();
 
 $id = $_POST['id'];
 $sql = "DELETE FROM contact_center WHERE contact_id='$id'";
