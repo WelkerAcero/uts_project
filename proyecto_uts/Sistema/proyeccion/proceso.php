@@ -15,7 +15,7 @@ $accionAgregar = "";
 $accionModificar = $accionEliminar = $accionCancelar = "disabled";
 $mostrarModal = false;
 
-include("../../conexion/conexion.php");
+include("../../../conexion/conexion.php");
 $con = new Conexion();
 $pdo = $con->conectarseMetodo_2(); //$pdo guarda la conexion. Luego $pdo procesa el metodo conectar 2
                                    //$pdo es usado de ahora en adelante para sentencias prepareSQL
@@ -47,7 +47,7 @@ switch ($accion) {
 
         $sentencia->bindParam(':Foto', $nombreArchivo);
         $sentencia->execute();
-        header('Location:index.php');
+        header('Location: resources/views/paginas/crudProyeccion.php');
         break;
 
     case "btnModificar":
@@ -88,7 +88,7 @@ switch ($accion) {
             $sentencia->execute();
         }
 
-        header('Location:index.php');
+        header('Location:resources/views/paginas/crudProyeccion.php');
 
         echo $txtID;
         echo "Presionaste Modificar";
@@ -111,13 +111,13 @@ switch ($accion) {
 
         $sentencia->bindParam(':id', $txtID);
         $sentencia->execute();
-        header('Location:index.php');
+        header('Location:resources/views/paginas/crudProyeccion.php');
 
         echo $txtID;
         echo "Presionaste Eliminar";
         break;
     case "btnCancelar":
-        header('Location:index.php');
+        header('Location:resources/views/paginas/crudProyeccion.php');
         break;
     case "Seleccionar":
         $accionAgregar = "disabled";

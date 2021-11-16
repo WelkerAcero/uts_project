@@ -2,14 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_programas.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <?php include('../layouts/plantilla.php');?>
+    <link rel="stylesheet" href="../../css/style_programas.css">
     <title>Programas</title>
 </head>
 
@@ -69,7 +63,7 @@
 
         <aside class="sidebar">
             <h1>Sidebar</h1>
-            <img src="img/5cursos.PNG" width="300px" height="300px" alt="">
+            <img src="../../img/5cursos.PNG" width="300px" height="300px" alt="">
         </aside>
 
         <div class="imagen_1">

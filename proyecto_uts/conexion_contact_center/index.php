@@ -3,10 +3,9 @@
     require("../php-login/index.php");
     ?>
 </div>
+
 <?php
-
 unset($_SESSION['consulta']);
-
 ?>
 
 <!DOCTYPE html>
@@ -33,12 +32,12 @@ unset($_SESSION['consulta']);
 <body style="font-size:15px">
 
     <figure class="imagenlogo">
-        <img src="../img/uts.png" width="220px" height="170px" style="margin-top: 20px; margin-left:80px; margin-bottom:-110px;">
+        <img src="../resources/img/uts.png" width="220px" height="170px" style="margin-top: 20px; margin-left:80px; margin-bottom:-110px;">
     </figure>
 
     <article class="accesos" style="margin-left:1155px; margin-top:20px;">
 
-        <a class="btn btn-success" style="font-size:15px;" href="../adminPage.php">
+        <a class="btn btn-success" style="font-size:15px;" href="../resources/views/paginas/adminPage.php">
             Ir átras
             <a>
     </article>

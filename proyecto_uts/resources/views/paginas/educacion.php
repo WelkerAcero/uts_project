@@ -2,26 +2,15 @@
 <html lang="es">
 
 <head>
-    <title>Extension UTS - Educacion</title>
+<title>Extension UTS - Educacion</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/style_education.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-
+    <link rel="stylesheet" href="../../css/style_education.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-
+    <?php include('../layouts/plantilla.php') ?>
+   
 </head>
 
 <body>
@@ -62,7 +51,7 @@
                                 <div class="carousel-inner">
 
                                     <div class="carousel-item active">
-                                        <img src="img/fondo1_carrusel.png" class="d-block w-100 img1" height="700px">
+                                        <img src="../../img/fondo1_carrusel.png" class="d-block w-100 img1" height="700px">
                                         <div class="carousel-caption d-md-block">
                                             <div class="slider_1">
                                                 <h1 class="slider_1_h1">
@@ -71,13 +60,13 @@
                                                     Es el área encargada de diseñar y desarrollar la oferta de capacitación con el propósito de actualizar, profundizar, y mejorar los conocimientos adquiridos en los procesos formativos de las
                                                     diferentes comunidades y en los diferentes sectores económicos. 
                                                 </h1>
-                                                <img class="imagen-slider-ejecutivos" src="img/ejecutivos.png" style="border-radius:120px;" height="420px">
+                                                <img class="imagen-slider-ejecutivos" src="../../img/ejecutivos.png" style="border-radius:120px;" height="420px">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="img/programas.jpg" class="d-block w-100 img1" height="700px">
+                                        <img src="../../img/programas.jpg" class="d-block w-100 img1" height="700px">
                                         <div class="carousel-caption d-md-block">
                                             <div class="contacto-educacion">
                                                 <h1 class="h1-educacion" style="color:green;"> INFORMACIÓN </h1>
@@ -160,12 +149,12 @@
 
                 <div class="tab-pane fade" id="nav-educacion" role="tabpanel" aria-labelledby="nav-educacion-tab" style="text-align:center; width:100%;">
 
-                    <img src="img/5cursos.PNG" width=100%;>
+                    <img src="../../img/5cursos.PNG" width=100%;>
 
                     <div class="contain">
 
                         <div style=" display:flex; justify-content:center; align-items:center;">
-                            <img class="pest2_1img" src="img/image-curso.png" width=350px; style="padding:30px;">
+                            <img class="pest2_1img" src="../../img/image-curso.png" width=350px; style="padding:30px;">
                             <h2 class="pest2_1texto" style="text-align: justify; color:black; padding:30px;"><b>Las Unidades Tecnológicas de Santander</b> en alianza con <b> Professional Board Group</b> informan a los estudiantes, docentes y graduados, que están abiertas las inscripciones para formarse con el <b>“PAQUETE DE 5 CURSOS EDUCACIÓN TIC”.</b>
                                 <br><br>¡Aproveche esta oportunidad y acceda a la formación de manera gratuita y pague sólo por la certificación!
                             </h2>
@@ -179,7 +168,7 @@
                                 <b>Certifica:</b> UTS (Opción de certificación internacional ICDL).<br>
                                 <b>Descripción del curso: </b> El curso está dirigido a docentes, estudiantes y graduados en cualquier área de la educación, que en su horizonte profesional esté el máximo aprovechamiento de las TIC en procesos de formación y quieran transformar su práctica pedagógica.
                             </h2>
-                            <img class="pest2_2img" src="img/image-curso2.png" style="padding:30px;">
+                            <img class="pest2_2img" src="../../img/image-curso2.png" style="padding:30px;">
                         </div>
 
                         <div style="display:flex; flex-direction:row; justify-content:center; padding: 20px;">
@@ -188,21 +177,21 @@
                                 <div class=" card-body">
                                     <p class="card-text"><b>Curso: Introducción y conceptualización</b></p>
                                 </div>
-                                <img src="img/curso-1.PNG" class="card-img-top" alt="...">
+                                <img src="../../img/curso-1.PNG" class="card-img-top" alt="...">
                             </div>
                             <!-- ======================================= 2 CURSO =======================================-->
                             <div id="curso_2" class="card">
                                 <div class="card-body">
                                     <p class="card-text"><b>Curso: Seguridad de la información</b></p>
                                 </div>
-                                <img src="img/curso-2.PNG" class="card-img-top" alt="...">
+                                <img src="../../img/curso-2.PNG" class="card-img-top" alt="...">
                             </div>
                             <!-- ======================================= 3 CURSO =======================================-->
                             <div id="curso_3" class="card">
                                 <div class="card-body">
                                     <p class="card-text"><b>Curso: Ambientes virtuales de aprendizaje AVA</b></p>
                                 </div>
-                                <img src="img/curso-3.PNG" class="card-img-top" alt="...">
+                                <img src="../../img/curso-3.PNG" class="card-img-top" alt="...">
                             </div>
                         </div>
 
@@ -213,14 +202,14 @@
                                 <div class="card-body">
                                     <p class="card-text"><b>Curso: Interacción y tecnologías digitales</b></p>
                                 </div>
-                                <img src="img/curso-4.PNG" class="card-img-top" alt="...">
+                                <img src="../../img/curso-4.PNG" class="card-img-top" alt="...">
                             </div>
                             <!-- ======================================= 5 CURSO =======================================-->
                             <div id="curso_5" class="card">
                                 <div class="card-body">
                                     <p class="card-text"><b>Curso: Creación de contenidos digitales</b></p>
                                 </div>
-                                <img src="img/curso-5.PNG" class="card-img-top" alt="...">
+                                <img src="../../img/curso-5.PNG" class="card-img-top" alt="...">
                             </div>
                         </div>
                         <br>
@@ -241,7 +230,7 @@
 
                 <div class="tab-pane fade" id="nav-cursos" role="tabpanel" aria-labelledby="nav-cursos-tab" style="text-align:center; width:100%;">
 
-                    <img src="img/cursos-corporativos.png" width=100%;>
+                    <img src="../../img/cursos-corporativos.png" width=100%;>
 
                     <div id="fondo3pestan">
 
@@ -260,7 +249,7 @@
                     <div id="contain-cursos1">
                         <!-- ========================================================== CURSO LINKEDIN ====================================================================-->
                         <div id="curso-corporativo1" class="card">
-                            <img class="card-img-top" src="img/curso-linkedin.PNG" alt="Card image cap" height="350px">
+                            <img class="card-img-top" src="../../img/curso-linkedin.PNG" alt="Card image cap" height="350px">
                             <div class="card-body">
                                 <h5 class="card-title" style="text-align:justify;">Aprende cómo posicionar su empresa y encontrar contactos clave y oportunidades de negocio a través de una red social profesional, a ser parte de este curso que incluye acceso a la plataforma durante 6 meses, acompañamiento permanente para la solución de dudas, acceso a webinars, espacios de networking y certificación.</h5>
                                 <p class="card-text" style="text-align:left;">
@@ -274,7 +263,7 @@
                         </div>
                         <!-- ========================================================== CURSO NAVEGAR POR INTERNET ====================================================================-->
                         <div id="curso-corporativo2" class="card">
-                            <img class="card-img-top" src="img/curso-navegar.PNG" alt="Card image cap" height="350px">
+                            <img class="card-img-top" src="../../img/curso-navegar.PNG" alt="Card image cap" height="350px">
                             <div class="card-body">
                                 <h5 class="card-title" style="text-align:justify;">Cree y mantenga su identidad digital, sacándole el mayor provecho de las herramientas de navegación y productividad online, para lograr excelentes resultados en su vida y trabajo con el curso “Aprende a navegar por internet” ofertado por las Unidades Tecnológicas de Santander en alianza con Professional Board Group.</h5>
                                 <p class="card-text" style="text-align:left;">
@@ -288,7 +277,7 @@
                         </div>
                         <!-- ========================================================== CURSO MARKETING DIGITAL ====================================================================-->
                         <div id="curso-corporativo3" class="card">
-                            <img class="card-img-top" src="img/curso-marketing.PNG" alt="Card image cap" height="350px">
+                            <img class="card-img-top" src="../../img/curso-marketing.PNG" alt="Card image cap" height="350px">
                             <div class="card-body">
                                 <h5 class="card-title" style="text-align:justify;">En mundo avanza constantemente y con éste la importancia del uso de las plataformas digitales. Qué mejor que el Marketing Digital para impulsar ese nuevo emprendimiento, la marca personal o llegar a un nivel aún más alto.</h5>
                                 <p class="card-text" style="text-align:left;">
@@ -306,7 +295,7 @@
                     <div id="contain-cursos2">
                         <!-- ========================================================== CURSO TRABAJO COLABORATIVO ====================================================================-->
                         <div id="curso-corporativo4" class="card">
-                            <img class="card-img-top" src="img/curso-colaborativo.PNG" alt="Card image cap" height="350px">
+                            <img class="card-img-top" src="../../img/curso-colaborativo.PNG" alt="Card image cap" height="350px">
                             <div class="card-body">
                                 <h5 class="card-title" style="text-align:justify;">En este curso se desarrollarán los conceptos de colaboración en línea, procesos claves para trabajar en un entorno colaborativo y la utilización de herramientas y aplicaciones que conlleven a la mejora y el fortalecimiento de la innovación, productividad y rentabilidad empresarial.</h5>
                                 <p class="card-text" style="text-align:left;">
@@ -320,7 +309,7 @@
                         </div>
                         <!-- ========================================================== CURSO SEGURIDAD DIGITAL ====================================================================-->
                         <div id="curso-corporativo5" class="card">
-                            <img class="card-img-top" src="img/curso-seguridad.PNG" alt="Card image cap" height="350px">
+                            <img class="card-img-top" src="../../img/curso-seguridad.PNG" alt="Card image cap" height="350px">
                             <div class="card-body">
                                 <h5 class="card-title" style="text-align:justify;">Aprenda a navegar por internet de forma segura, proteger sus dispositivos móviles de las redes de ciberdelincuentes, virus, intentos de robo, entre otros. Además, al terminar el curso se estará en capacidad de crear y restaurar copias de seguridad y datos de manera apropiada y segura.</h5>
                                 <p class="card-text" style="text-align:left;">
@@ -361,13 +350,13 @@
 
                 <div class="tab-pane fade" id="nav-basics" role="tabpanel" aria-labelledby="nav-basics-tab">
                     <video width="100%" controls>
-                        <source src="img/Video-Uts-Y-Basics-1.mp4" type="video/mp4">
+                        <source src="../../img/Video-Uts-Y-Basics-1.mp4" type="video/mp4">
                     </video>
 
                     <h1 id="fondo-basic">
                         <style>
                             #fondo-basic {
-                                background: url("img/fondo-basic.jpg");
+                                background: url("../../img/fondo-basic.jpg");
                                 background-size: cover;
                             }
                         </style>
@@ -408,12 +397,12 @@
 
                                 <style>
                                     #fondo-info1 {
-                                        background: url("img/fondo-info2.jpg");
+                                        background: url("../../img/fondo-info2.jpg");
                                         background-size: cover;
                                     }
 
                                     #fondo-info2 {
-                                        background: url("img/fondo-info2.jpg");
+                                        background: url("../../img/fondo-info2.jpg");
                                         background-size: cover;
                                     }
                                 </style>
@@ -429,20 +418,20 @@
                     <div id="fondo-imagen-contacto" class="container" style="padding:30px;">
                         <style>
                             #fondo-imagen-contacto {
-                                background: url("img/fondo-contacto.jpg");
+                                background: url("../../img/fondo-contacto.jpg");
                                 background-size: cover;
                             }
                         </style>
-                        <?php
 
-                        //trae los parametros POST definidosÑ $res = $student->insertar_client( $_POST['name'],$_POST['email'],$_POST['phone']...etc
-                        //para evitar extender más el código y hacerlo más legible
-                        include("conexion_contact_center/receive_data.php"); //=>Recibe los argumentos y son enviados a conexion_contac_center
-                        ?>
+
+                        <!--trae los parametros POST definidosÑ $res = $student->insertar_client( $_POST['name'],$_POST['email'],$_POST['phone']...etc
+                        para evitar extender más el código y hacerlo más legible
+                        =>Recibe los argumentos y son enviados a conexion_contac_center
+                        -->
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="well well-sm">
-                                    <form class="form-horizontal" method="post">
+                                    <form class="form-horizontal" method="post" action="../../../conexion_contact_center/receive_data.php">
                                         <fieldset>
                                             <h1 class="text-center"><u>CONTACT CENTER <b style="color:#96B933;">UTS</b></u></h1><br>
                                             <h2 class="text-center">Deja tus datos en el siguiente formulario y te contactamos:</h2><br>

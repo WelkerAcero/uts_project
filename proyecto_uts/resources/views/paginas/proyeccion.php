@@ -1,6 +1,5 @@
 <?php
-
-require("conexion/conexion.php");
+require("../../../conexion/conexion.php"); /* Conexion */
 
 ?>
 
@@ -8,14 +7,8 @@ require("conexion/conexion.php");
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styleProyeccionSocial.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link rel="stylesheet" href="../../css/styleProyeccionSocial.css">
+    <?php include('../layouts/plantilla.php');?>
     <title>Proyeccion</title>
 </head>
 
@@ -82,7 +75,7 @@ require("conexion/conexion.php");
           color: transparent;">Visita nuestras instalaciones</h1>
             <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15836.720457168101!2d-73.1235992!3d7.1051139!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5f50c91e41f0ac6e!2sUnidades%20Tecnol%C3%B3gicas%20de%20Santander!5e0!3m2!1ses-419!2sco!4v1621896294882!5m2!1ses-419!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
-            <img class="uts-imagen-calidad" src="img/uts-vision.jpg" width="100%">
+            <img class="uts-imagen-calidad" src="../../img/uts-vision.jpg" width="100%">
         </aside>
 
         <div class="imagen-1">
@@ -107,7 +100,7 @@ require("conexion/conexion.php");
                             </thead>
                             
                             <tr style="border-top:2px solid black; border-bottom:2px solid black; padding:0px -40px">
-                                <td><img style="margin:20px 40px" class="img-thumbnail" width="100%" src="Sistema/Imagenes/<?php echo $project['Foto']; ?>" /></td>
+                                <td><img style="margin:20px 40px" class="img-thumbnail" width="100%" src="../../../Sistema/Imagenes/<?php echo $project['Foto']; ?>" /></td>
                                 <td width="60%">
                                     <h5 style="padding:60px; text-align:justify;"><?php echo $project['Texto']; ?></h5>
                                 </td>

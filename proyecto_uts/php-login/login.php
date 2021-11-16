@@ -5,7 +5,7 @@ session_start();
 $message = '';
 
 if (isset($_SESSION['user_id'])) {
-  header('Location: ../adminPage.php');
+  header('Location: ../resources/views/paginas/adminPage.php');
 }
 
 require 'database.php';
@@ -32,7 +32,7 @@ if (!empty($_POST['email']) && strpos($_POST['email'], ' ')) {
         if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
             $_SESSION['user_id'] = $results['id'];
             $_SESSION['login_date'] = time();
-            header("Location: ../adminPage.php");
+            header("Location: ../resources/views/paginas/adminPage.php");
         } else {
             $message = 'Estas credenciales no son válidas, intente nuevamente';
         }

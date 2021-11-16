@@ -7,6 +7,6 @@
   session_destroy();
 
 
-  header('Location: ../presentacion.php');
+  header('Location: ../resources/views/paginas/presentacion.php');
   ?>
 </a>

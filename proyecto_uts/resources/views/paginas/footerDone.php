@@ -2,15 +2,9 @@
 <html lang="es">
 
 <head>
+    <link rel="stylesheet" href="../../css/style_HeaderFooter.css">
     <title>Extension UTS</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/style_HeaderFooter.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+    <?php include('../layouts/plantilla.php'); ?>
 </head>
 
 <body>
@@ -57,11 +51,11 @@
          -webkit-background-clip: text;
           color: transparent;">REDES SOCIALES</h2>
                     <br>
-                    <a class="red" href="https://www.facebook.com/UnidadesTecnologicasdeSantanderUTS/?epa=SEARCH_BOX" target="_blank" title="Facebook"><img class="imagen-red" style="width:40px;" src="img/facebook.png"></a>
-                    <a class="red" href="https://www.youtube.com/channel/UC-rIi4OnN0R10Wp-cPiLcpQ" target="_blank" title="Youtube"><img class="imagen-red" style="width:40px;" src="img/youtube.png"></a>
-                    <a class="red" href="https://www.instagram.com/unidades_uts/?hl=els-la" target="_blank" title="Instagram"><img class="imagen-red" style="width:40px;" src="img/instagram.png"></a>
-                    <a class="red" href="https://twitter.com/Unidades_UTS" target="_blank" title="Twitter"><img class="imagen-red" style="width:40px;" src="img/twitter.png"></a>
-                    <a class="red" href="https://www.linkedin.com/company/unidades-tecnol%C3%B3gicas-de-santander/" target="_blank" title="Linkedin"><img class="imagen-red" style="width:40px;" src="img/linkedin.png"></a>
+                    <a class="red" href="https://www.facebook.com/UnidadesTecnologicasdeSantanderUTS/?epa=SEARCH_BOX" target="_blank" title="Facebook"><img class="imagen-red" style="width:40px;" src="../../img/facebook.png"></a>
+                    <a class="red" href="https://www.youtube.com/channel/UC-rIi4OnN0R10Wp-cPiLcpQ" target="_blank" title="Youtube"><img class="imagen-red" style="width:40px;" src="../../img/youtube.png"></a>
+                    <a class="red" href="https://www.instagram.com/unidades_uts/?hl=els-la" target="_blank" title="Instagram"><img class="imagen-red" style="width:40px;" src="../../img/instagram.png"></a>
+                    <a class="red" href="https://twitter.com/Unidades_UTS" target="_blank" title="Twitter"><img class="imagen-red" style="width:40px;" src="../../img/twitter.png"></a>
+                    <a class="red" href="https://www.linkedin.com/company/unidades-tecnol%C3%B3gicas-de-santander/" target="_blank" title="Linkedin"><img class="imagen-red" style="width:40px;" src="../../img/linkedin.png"></a>
                 </div>
 
             </div>

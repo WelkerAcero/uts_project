@@ -1,5 +1,5 @@
 <?php
-include('conexion/conexion.php');
+include("../conexion/conexion.php");
 //se crea una nueva instancia
 $student = new Conexion();
 //isset() para comprobar si una variable está definida -- !empty si no viene null
@@ -18,11 +18,13 @@ if (isset($_POST) && !empty($_POST)) {
         //se configura el mensaje
         echo '<script type="text/javascript">
 alert("Información insertada Correctamente");
-window.location.href="educacion.php";
+window.location.href="/proyecto_uts/resources/views/paginas/educacion.php";
 </script>';
+
     } else {
         echo '<script type="text/javascript">
 alert("Error: No se pudo insertar el registro");
 </script>';
     }
 }
+?>

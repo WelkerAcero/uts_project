@@ -2,18 +2,9 @@
 <html lang="es">
 
 <head>
-    <title>Extension UTS</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <link rel="stylesheet" href="css/style_carrusel.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/style_carrusel.css">
+    <?php include('../layouts/plantilla.php');?>
+    <title>Carrusel_presentacion</title>
 </head>
 
 <body>
@@ -29,7 +20,7 @@
                 <div class="carousel-inner">
 
                     <div class="carousel-item active">
-                        <img src="img/slider1.jpg" class="d-block w-100 img1" height="700px">
+                        <img src="../../img/slider1.jpg" class="d-block w-100 img1" height="700px">
                         <div class="carousel-caption">
                             <div class="texto-1slider">
                                 <h1 class="extension">
@@ -42,9 +33,9 @@
                     </div>
 
                     <div class="carousel-item">
-                        <img src="img/fondo.jpg" class="d-block w-100 img1" height="700px">
+                        <img src="../../img/fondo.jpg" class="d-block w-100 img1" height="700px">
                         <div class="carousel-caption d-md-block">
-                            <img src="img/chicos.png" width="300px">
+                            <img src="../../img/chicos.png" width="300px">
                             <div class="texto-2slider">
                                 <h1> OBJETIVOS </h1>
                                 <h2><i class="fas fa-check-circle"></i> Formular y ejecutar planes, programas y proyectos institucionales de proyección social, en concordancia con los ámbitos de acción de las Unidades Tecnológicas de Santander.</h2>
@@ -56,7 +47,7 @@
                     </div>
 
                     <div class="carousel-item">
-                        <img src="img/contacto.jpg" class="d-block w-100 img1" height="700px">
+                        <img src="../../img/contacto.jpg" class="d-block w-100 img1" height="700px">
                         <div class="carousel-caption d-md-block">
                             <div class="contacto-extension" style="color: black; text-align: justify;  margin-top: -600px;">
                                 <h1> CONTACTO </h1>

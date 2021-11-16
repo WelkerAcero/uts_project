@@ -204,7 +204,7 @@ body {
 }
 
 #fondo3pestan {
-    background: url("img/fondo_3pestana.jpg");
+    background: url("../img/fondo_3pestana.jpg");
 }
 
 #pest3_1sec {
@@ -233,7 +233,7 @@ body {
 /*====================================================== 4 PESTAÑA PROGRAMAS ==========================================================*/
 
 .contenedor-programas {
-    background: url("../gif/fondo.gif");
+    background: url("../../gif/fondo.gif");
     background-size: cover;
     text-align: center;
     display: flex;
