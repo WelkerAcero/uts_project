@@ -18,7 +18,7 @@ if (isset($_POST) && !empty($_POST)) {
         //se configura el mensaje
         echo '<script type="text/javascript">
 alert("Información insertada Correctamente");
-window.location.href="/proyecto_uts/resources/views/paginas/educacion.php";
+window.location.href="../resources/views/paginas/educacion.php";
 </script>';
 
     } else {
