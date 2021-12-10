@@ -46,17 +46,13 @@
 
                     <h5 class="programa_titulo"><b><?= $project['course_title'] ?></b></h5>
 
-<<<<<<< HEAD
-                    <img id="programa_imagen" style="" class="img-thumbnail" width="300px" height="300px" src="../../../Sistema/Imagenes/<?= $project['Foto']; ?>" />
-=======
                     <img id="programa_imagen" style="" class="img-thumbnail" src="../../../Sistema/Imagenes/<?= $project['Foto']; ?>" />
 
                     <div class="ir_al_programa">
-                        <form class="contenedor_boton" action="" method="get">
-                            <button class="botonPrograma" type="submit" value="<?php $empleado['course_link']; ?>">Ir al sitio</button>
+                        <form class="contenedor_boton" action="<?= $project['course_link'];?>" method="POST">
+                            <button class="botonPrograma" type="submit" name="">Ir al sitio</button>
                         </form>
                     </div>
->>>>>>> 18da392a96bddf12ea60487b0675bbf5953bfa1e
 
                     <p class="programa_descripcion"><?= $project['Texto'] ?></p>
                     <hr>
