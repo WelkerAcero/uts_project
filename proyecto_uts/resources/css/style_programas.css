@@ -19,7 +19,7 @@ body {
     width: 100%;
     margin: 10px auto;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 0px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, auto);
     grid-template-areas:"header header header header" 
@@ -29,7 +29,7 @@ body {
                         "footer footer footer footer";
 }
 
-.contenedor>div, .contenedor .header, .contenedor .contenido, .contenido .sidebar, .contenido .footer {
+.contenedor>div, .contenedor .header, .contenedor .contenido, .contenido .sidebar, .contenido {
     background: #fff;
     padding-bottom: 20px;
     border-radius: 4px;
@@ -62,7 +62,7 @@ body {
 
 .lista_programas{
     max-width: 100%;
-    width: 29%;
+    width: 30%;
     margin: 10px;
     /* display:flex;
     flex-direction: column;
@@ -153,5 +153,3 @@ body {
         margin: 10px;
     }
 }
-
-;

@@ -46,7 +46,7 @@
 
                     <h4 class="programa_titulo"><?= $project['course_title'] ?></h4>
 
-                    <img id="programa_imagen" style="" class="img-thumbnail" width="300px" height="1000px" src="../../../Sistema/Imagenes/<?= $project['Foto']; ?>" />
+                    <img id="programa_imagen" style="" class="img-thumbnail" width="300px" height="300px" src="../../../Sistema/Imagenes/<?= $project['Foto']; ?>" />
 
                     <p class="programa_descripcion"><?= $project['Texto'] ?></p>
 
