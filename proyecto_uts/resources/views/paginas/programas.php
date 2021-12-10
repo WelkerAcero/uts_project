@@ -25,7 +25,7 @@
                 fecha y hora que se realizará, no5mbre de los organizadores y el respectivo
                 enlace para ingresar.
             </p>
-            <br>
+            <br><br>
             <div>
                 <h1 class="tituloLista">
                     Lista de programas
@@ -44,12 +44,22 @@
 
                 <div class="lista_programas">
 
-                    <h4 class="programa_titulo"><?= $project['course_title'] ?></h4>
+                    <h5 class="programa_titulo"><b><?= $project['course_title'] ?></b></h5>
 
+<<<<<<< HEAD
                     <img id="programa_imagen" style="" class="img-thumbnail" width="300px" height="300px" src="../../../Sistema/Imagenes/<?= $project['Foto']; ?>" />
+=======
+                    <img id="programa_imagen" style="" class="img-thumbnail" src="../../../Sistema/Imagenes/<?= $project['Foto']; ?>" />
+
+                    <div class="ir_al_programa">
+                        <form class="contenedor_boton" action="" method="get">
+                            <button class="botonPrograma" type="submit" value="<?php $empleado['course_link']; ?>">Ir al sitio</button>
+                        </form>
+                    </div>
+>>>>>>> 18da392a96bddf12ea60487b0675bbf5953bfa1e
 
                     <p class="programa_descripcion"><?= $project['Texto'] ?></p>
-
+                    <hr>
                     <ul>
                         <li>
                             <p class="programa_tiempo">Tiempo del curso: <?= $project['course_time'] ?></p>
@@ -61,15 +71,11 @@
                             <p class="programa_inicio">Fecha de inicio: <?= $project['course_dateStarts'] ?></p>
                         </li>
                     </ul>
-
+                    <hr>
                     <p class="programa_observacion">Observaciones: <?= $project['course_observation'] ?></p>
 
                     <p class="programa_fecha">Publicado el: <?= $project['Fecha'] ?></p>
-                    <div class="ir_al_programa">
-                        <form action="">
-                            <button class="botonPrograma" type="submit">Ir al sitio</button>
-                        </form>
-                    </div>
+                   
                 </div>
 
             <?php } ?>
@@ -88,11 +94,6 @@
                 </P>
             </div>
         </div>
-
-        <aside class="sidebar">
-            <h1>Sidebar</h1>
-            <img src="../../img/5cursos.PNG" width="300px" height="300px" alt="">
-        </aside>
 
         <footer class="footerProgramas">
             <?php include_once("../layouts/footerDone.php"); ?>

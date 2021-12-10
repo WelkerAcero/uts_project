@@ -7,6 +7,7 @@ $txtFoto = (isset($_FILES['txtFoto']["name"])) ? $_FILES['txtFoto']["name"] : ""
 $txtDuracion = (isset($_POST['txtDuracion'])) ? $_POST['txtDuracion'] : "";
 $txtFechaInicio = (isset($_POST['txtFechaInicio'])) ? $_POST['txtFechaInicio'] : "";
 $txtObservaciones = (isset($_POST['txtObservaciones'])) ? $_POST['txtObservaciones'] : "";
+$txtLink = (isset($_POST['txtLink'])) ? $_POST['txtLink'] : "";
 $fecha_publicacion = (isset($_POST['fecha']))  ? $_POST['fecha'] : "";
 
 
@@ -34,14 +35,15 @@ switch ($accion) {
             break;
         }
 
-        $sentencia = $pdo->prepare("INSERT INTO cursos(course_title,Texto,Foto,course_time,course_dateStarts,course_observation,Fecha) 
-        VALUES(:Title,:Descripcion,:Foto,:Duracion,:FechaInicio,:Observaciones,:fechaPublicacion)");
+        $sentencia = $pdo->prepare("INSERT INTO cursos(course_title,Texto,Foto,course_time,course_dateStarts,course_observation,course_link,Fecha) 
+        VALUES(:Title,:Descripcion,:Foto,:Duracion,:FechaInicio,:Observaciones,:Link,:fechaPublicacion)");
 
         $sentencia->bindParam(':Title', $txtTitulo, PDO::PARAM_STR);
         $sentencia->bindParam(':Descripcion', $txtDescripcion, PDO::PARAM_STR);
         $sentencia->bindParam(':Duracion', $txtDuracion, PDO::PARAM_STR);
         $sentencia->bindParam(':FechaInicio', $txtFechaInicio, PDO::PARAM_STR);
         $sentencia->bindParam(':Observaciones', $txtObservaciones, PDO::PARAM_STR);
+        $sentencia->bindParam(':Link', $txtLink, PDO::PARAM_STR);
         $sentencia->bindParam(':fechaPublicacion', $fecha_publicacion, PDO::PARAM_STR);
 
         $Fecha = new DateTime();
@@ -65,6 +67,7 @@ switch ($accion) {
                                                         course_time=:Duracion,
                                                         course_dateStarts=:FechaInicio,
                                                         course_observation=:Observaciones,
+                                                        course_link=:Link,
                                                         Fecha=:fechaPublicacion 
                                                         WHERE id=:id");
 
@@ -73,6 +76,7 @@ switch ($accion) {
         $sentencia->bindParam(':Duracion', $txtDuracion, PDO::PARAM_STR);
         $sentencia->bindParam(':FechaInicio', $txtFechaInicio, PDO::PARAM_STR);
         $sentencia->bindParam(':Observaciones', $txtObservaciones, PDO::PARAM_STR);
+        $sentencia->bindParam(':Link', $txtLink, PDO::PARAM_STR);
         $sentencia->bindParam(':fechaPublicacion', $fecha_publicacion, PDO::PARAM_STR);
         $sentencia->bindParam(':id', $txtID);
         $sentencia->execute();
@@ -157,6 +161,7 @@ switch ($accion) {
         $txtDuracion = $empleado['course_time'];
         $txtFechaInicio = $empleado['course_dateStarts'];
         $txtObservaciones = $empleado['course_observation'];
+        $txtLink = $empleado['course_link'];
 
         break;
 }

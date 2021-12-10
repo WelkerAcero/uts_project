@@ -87,6 +87,14 @@ require('../../../Sistema/cursos/procesoCursos.php');
                                     <?php echo (isset($error['Texto'])) ? $error['Texto'] : ""; ?>
                                 </div>
 
+                                <br>                                
+
+                                <label for="">Link de acceso al curso:</label>
+                                <input type="text" class="form-control <?php echo (isset($error['Texto'])) ? "is-invalid" : ""; ?>" name="txtLink" value="<?= $txtLink; ?>" placeholder="" id="txt8" require="">
+                                <div class="invalid-feedback">
+                                    <?php echo (isset($error['Texto'])) ? $error['Texto'] : ""; ?>
+                                </div>
+
                                 <br>
 
                                 <label for="date">Fecha de publicación del curso:</label><br>
@@ -123,6 +131,7 @@ require('../../../Sistema/cursos/procesoCursos.php');
                         <th>Duración del curso</th>
                         <th>Fecha de inicio</th>
                         <th>Observaciones</th>
+                        <th>Enlace</th>
                         <th>Fecha de publicación</th>
                         <th>Acciones</th>
                     </tr>
@@ -131,11 +140,11 @@ require('../../../Sistema/cursos/procesoCursos.php');
                     <tr>
                         <td><img class="img-thumbnail" width="100%" src="../../../Sistema/imagenes/<?= $project['Foto']; ?>" /></td>
                         <td><?php echo $project['course_title']; ?></td>
-                        <td><?php echo $project['Texto']; ?></td>
-                        <td><?php echo $project['Foto']; ?></td>
+                        <td><?php echo $project['Texto']; ?></td>                        
                         <td><?php echo $project['course_time']; ?></td>
                         <td><?php echo $project['course_dateStarts']; ?></td>
                         <td><?php echo $project['course_observation']; ?></td>
+                        <td><?php echo $project['course_link']; ?></td>
                         <td><?php echo $project['Fecha']; ?></td>
                         <td>
                             <form action="" method="POST">
