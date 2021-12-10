@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2021 at 04:54 AM
+-- Generation Time: Dec 10, 2021 at 01:34 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -50,10 +50,23 @@ INSERT INTO `contact_center` (`contact_id`, `contact_name`, `contact_email`, `co
 
 CREATE TABLE `cursos` (
   `ID` int(11) NOT NULL,
-  `Texto` varchar(1000) CHARACTER SET utf8mb4 NOT NULL,
+  `course_title` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `Texto` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `Foto` varchar(1000) CHARACTER SET utf8mb4 NOT NULL,
+  `course_time` varchar(11) COLLATE utf8_spanish_ci NOT NULL,
+  `course_dateStarts` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `course_observation` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `Fecha` varchar(20) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `cursos`
+--
+
+INSERT INTO `cursos` (`ID`, `course_title`, `Texto`, `Foto`, `course_time`, `course_dateStarts`, `course_observation`, `Fecha`) VALUES
+(15, 'Clases Anggie\'s CSS 22', 'Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte', '1639075552_CSS_IMAGE.jpeg', '3 Meses', '2022-01-19', 'El curso puede tener un costo de $20.000 - $30.000', '2021-12-09'),
+(16, 'PHP - CURSO - 1', 'Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte', '1639075654_PHP_IMAGE.jpg', '4 Meses', '2022-01-19', 'Costo del curso: $50.000', '2021-12-10'),
+(18, 'Clases de programación 2', 'Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte', '1639087814_ImagenProgramacion_2.jpg', '1 año', '2022-01-20', 'El curso puede tener un costo de $20.000 - $100.000', '2021-12-09');
 
 -- --------------------------------------------------------
 
@@ -73,7 +86,7 @@ CREATE TABLE `proyeccion` (
 --
 
 INSERT INTO `proyeccion` (`ID`, `Texto`, `Foto`, `Fecha`) VALUES
-(57, 'UN GATO OP', '1638488288_hd-widescreen-wallpaper-3.jpg', '2021-12-03');
+(57, 'UN GATO OP', '1638505960_dissidia-final-fantasy-game-hd-wallpaper-1920x1080-4789.jpg', '2021-12-03');
 
 -- --------------------------------------------------------
 
@@ -140,7 +153,7 @@ ALTER TABLE `contact_center`
 -- AUTO_INCREMENT for table `cursos`
 --
 ALTER TABLE `cursos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `proyeccion`
