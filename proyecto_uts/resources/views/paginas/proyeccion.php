@@ -16,7 +16,7 @@ require("../../../conexion/conexion.php"); /* Conexion */
 
     <div class="contenedor">
         <header class="header">
-            <?php require "headerMenu.php"; ?>
+            <?php require_once("../layouts/headerMenu.php"); ?>
         </header>
 
         <div class="contenido" id="fondo-proyeccion-texto1">
@@ -42,7 +42,7 @@ require("../../../conexion/conexion.php"); /* Conexion */
             <br>
             <h1 style="margin-bottom:-10px; text-align:center;"><u>Algunos proyectos ejecutados</u></h1>
             <?php
-            require "carrusel.php";
+            require_once("../layouts/carrusel.php");
             ?>
         </div>
 
@@ -63,7 +63,7 @@ require("../../../conexion/conexion.php"); /* Conexion */
         </div>
         <style>
             #fondo-proyeccion-texto2 {
-                background: url("img/fondo_3pestana.jpg");
+                background: url("../../img/fondo_3pestana.jpg");
                 background-size: cover;
             }
         </style>
@@ -117,7 +117,7 @@ require("../../../conexion/conexion.php"); /* Conexion */
 
 
         <footer class="footer">
-            <?php require "footerDone.php"; ?>
+            <?php require_once("../layouts/footerDone.php"); ?>
         </footer>
 
     </div>

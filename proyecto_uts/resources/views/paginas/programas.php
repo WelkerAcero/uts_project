@@ -1,8 +1,9 @@
+<?php require("../../../conexion/conexion.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include('../layouts/plantilla.php');?>
+    <?php require_once('../layouts/plantilla.php'); ?>
     <link rel="stylesheet" href="../../css/style_programas.css">
     <title>Programas</title>
 </head>
@@ -11,7 +12,7 @@
 
     <div class="contenedor">
         <header class="header">
-            <?php require "headerMenu.php";?>
+            <?php require_once("../layouts/headerMenu.php"); ?>
         </header>
 
         <div class="contenido" id="fondo-proyeccion-texto1">
@@ -24,28 +25,55 @@
                 fecha y hora que se realizará, no5mbre de los organizadores y el respectivo
                 enlace para ingresar.
             </p>
+            <br>
+            <div>
+                <h1 class="tituloLista">
+                    Lista de programas
+                </h1>
+            </div>
         </div>
 
-        <div class="programas">
-            <h1 style="margin-bottom:-10px; text-align:center;">
-                Lista de programas
-            </h1>
-            <div style="margin-top:20px;">
-                <table class="table vertical-align: middle table-responsive">
-                    <thead>
-                        <tr>
-                            <th>Programa 1</th>
-                            <th>Programa 2</th>
-                        </tr>
-                    </thead>
+        <?php
+        $connect = new Conexion();
+        $listacursos = $connect->leer_curso();
+        ?>
 
-                    <tbody class="">
-                        <td>Texto programa 1</td>
-                        <td>Texto programa 2</td>
-                    </tbody>
-                </table>
-            </div>
-            
+        <div class="programas">
+
+            <?php foreach ($listacursos as $project) { ?>
+
+                <div class="lista_programas">
+
+                    <h4 class="programa_titulo"><?= $project['course_title'] ?></h4>
+
+                    <img id="programa_imagen" style="" class="img-thumbnail" width="300px" height="1000px" src="../../../Sistema/Imagenes/<?= $project['Foto']; ?>" />
+
+                    <p class="programa_descripcion"><?= $project['Texto'] ?></p>
+
+                    <ul>
+                        <li>
+                            <p class="programa_tiempo">Tiempo del curso: <?= $project['course_time'] ?></p>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <p class="programa_inicio">Fecha de inicio: <?= $project['course_dateStarts'] ?></p>
+                        </li>
+                    </ul>
+
+                    <p class="programa_observacion">Observaciones: <?= $project['course_observation'] ?></p>
+
+                    <p class="programa_fecha">Publicado el: <?= $project['Fecha'] ?></p>
+                    <div class="ir_al_programa">
+                        <form action="">
+                            <button class="botonPrograma" type="submit">Ir al sitio</button>
+                        </form>
+                    </div>
+                </div>
+
+            <?php } ?>
+
         </div>
 
         <!--Contenido 2-->
@@ -66,17 +94,8 @@
             <img src="../../img/5cursos.PNG" width="300px" height="300px" alt="">
         </aside>
 
-        <div class="imagen_1">
-            <h1>Imagen 1</h1>
-        </div>
-
-        <div class="imagen_2">
-            <h1>Imagen 2</h1>
-        </div>
-
-
-        <footer class="footer">
-            <?php require "footerDone.php";?>
+        <footer class="footerProgramas">
+            <?php include_once("../layouts/footerDone.php"); ?>
         </footer>
 
     </div>

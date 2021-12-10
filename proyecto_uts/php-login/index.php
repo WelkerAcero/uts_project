@@ -32,7 +32,7 @@ if (isset($_SESSION['user_id'])) {
 </head>
 
 <body>
-  <?php require 'partials/header.php'?>
+  <?php require_once('partials/header.php')?>
 
   <div class="bienvenida" style="font-size:20px; text-decoration: none; padding-bottom:10px;
     color:white; border-bottom: 2px  solid #eee; padding: 20px 0; margin-bottom: 0px; width: 100%; text-align: center;

@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="../../css/style_HeaderFooter.css">
     <title>Extension UTS</title>
-    <?php include('../layouts/plantilla.php')?>
+    <?php require('../layouts/plantilla.php')?>
 </head>
 
 <body>

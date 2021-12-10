@@ -4,16 +4,7 @@
 <head>
   <?php //include('../layouts/plantilla.php');?>
   <link rel="stylesheet" href="../../css/style_presentacion.css">
-  <link rel="stylesheet" type="text/css" href="../../../librerias/alertifyjs/css/alertify.css">
-  <link rel="stylesheet" type="text/css" href="../../../librerias/alertifyjs/css/themes/default.css">
-  <link rel="stylesheet" type="text/css" href="../../../librerias/select2/css/select2.css">
-  <title>Extension UTS</title>
-  <script src="../../../librerias/jquery-3.6.0.min.js"></script>
-  <script src="../../js/app.js"></script>
-  <script src="../../../librerias/bootstrap/js/bootstrap.js"></script>
-  <script src="../../../librerias/alertifyjs/alertify.js"></script>
-  <script src="../../../librerias/select2/js/select2.js"></script>
-
+  <?php require("../layouts/plantillaLibrerias.php")?>
 </head>
 
 <body>
@@ -22,7 +13,7 @@
     <!-- ================================================================ SECCIÓN MENÚ ====================================================================== -->
     <header class="header_presentacion">
       <?php
-      include("headerMenu.php");
+      require("../layouts/headerMenu.php");
       ?>
     </header>
     <!-- ================================================================ SECCIÓN CARRUSEL ====================================================================== -->
@@ -32,9 +23,9 @@
       </div>
 
       <?php
-      require("carrusel_presentacion.php")
+      require("../layouts/carrusel_presentacion.php")
       ?>
-
+      <br>
     </div>
     <!-- ================================================================ SECCIÓN POLITICAS ====================================================================== -->
     <div class="politicas">
@@ -109,7 +100,7 @@
     <footer class="footer_presentacion">
 
       <?php
-      include("footerDone.php");
+      require("../layouts/footerDone.php");
       ?>
 
     </footer>

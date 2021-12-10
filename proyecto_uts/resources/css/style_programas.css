@@ -3,6 +3,7 @@
     padding: 0;
     /**box-sizing: border-box;**/
     font-family: 'Playfair Display', serif;
+    /* border: 1px solid red; */
 }
 
 body {
@@ -25,7 +26,6 @@ body {
                         "contenido contenido contenido sidebar" 
                         "programas programas programas sidebar" 
                         "contenido_2 contenido_2 contenido_2 sidebar" 
-                        "imagen_1 imagen_1 imagen_2 sidebar" 
                         "footer footer footer footer";
 }
 
@@ -35,9 +35,14 @@ body {
     border-radius: 4px;
 }
 
+.contenedor .tituloLista{
+    text-align: center;
+    margin-bottom:-20px;
+}
+
 .contenedor .header {
     color: #fff;
-    grid-area: header;
+    grid-area: header; 
 }
 
 .contenedor .contenido {
@@ -46,8 +51,42 @@ body {
 }
 
 .contenedor .programas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     grid-area: programas;
     margin-left: 15px;
+    max-width: 100%;
+   
+}
+
+.lista_programas{
+    max-width: 100%;
+    width: 29%;
+    margin: 10px;
+    /* display:flex;
+    flex-direction: column;
+    align-items: center; */
+    border: 1px solid black;
+
+}
+
+.lista_programas > div, .programa_titulo{
+    text-align: center;
+}
+
+.lista_programas > div, .programa_descripcion, .programa_tiempo, .programa_inicio, .programa_observacion, .programa_fecha{
+    margin: 5px;
+}
+
+.lista_programas > #programa_imagen{
+    display: block;
+    margin: auto;
+}
+
+.lista_programas .botonPrograma{
+    display: flex;
+    align-content: flex-end;
 }
 
 .contenedor .contenido_2 {
@@ -70,15 +109,7 @@ body {
     border:1px solid black;
 }
 
-.contenedor .imagen-1 {
-    grid-area: imagen-1;
-}
-
-.contenedor .imagen-2 {
-    grid-area: imagen-2;
-}
-
-.contenedor .footer {
+.contenedor .footerProgramas {
     color: #fff;
     grid-area: footer
 }

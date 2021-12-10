@@ -1,11 +1,11 @@
 <?php
-require('../../../Sistema/proyeccion/proceso.php');
+require('../../../Sistema/cursos/procesoCursos.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>CRUD PROYECCIÓN</title>
+    <title>CRUD CURSOS</title>
     <?php include('../layouts/plantilla.php'); ?>
 </head>
 
@@ -19,8 +19,7 @@ require('../../../Sistema/proyeccion/proceso.php');
     </div>
 
     <a href="adminPage.php">
-        <i class="far fa-arrow-alt-circle-left fa-5x" style="color:yellow; margin-top:-100px; color:white; margin-left: 30px;">
-        </i>
+        <i class="far fa-arrow-alt-circle-left fa-5x" style="color:yellow; margin-top:-100px; color:white; margin-left: 30px;"></i>
     </a>
 
     <div class="container">
@@ -39,26 +38,60 @@ require('../../../Sistema/proyeccion/proceso.php');
                         <div class="modal-body">
                             <div class="form-row">
                                 <input type="hidden" required name="txtID" value="<?php echo $txtID; ?>" placeholder="" id="txt1" require="">
-                                <label for="">Texto:</label>
-                                <input type="text" class="form-control <?php echo (isset($error['Texto'])) ? "is-invalid" : ""; ?>" name="txtTexto" value="<?=$txtTexto; ?>" placeholder="" id="txt2" require="">
+
+                                <label for="">Title:</label>
+                                <input type="text" class="form-control <?php echo (isset($error['Texto'])) ? "is-invalid" : ""; ?>" name="txtTitulo" value="<?=$txtTitulo; ?>" placeholder="" id="txt2" required="">
                                 <div class="invalid-feedback">
                                     <?php echo (isset($error['Texto'])) ? $error['Texto'] : ""; ?>
                                 </div>
+
                                 <br>
 
-                                <label for="">Foto:</label>
+                                <label for="">Description:</label>
+                                <input type="text" class="form-control <?php echo (isset($error['Texto'])) ? "is-invalid" : ""; ?>" name="txtDescripcion" value="<?= $txtDescripcion; ?>" placeholder="Maximo 100 letras contando espacios" id="txt3" required>
+                                <div class="invalid-feedback">
+                                    <?php echo (isset($error['Texto'])) ? $error['Texto'] : ""; ?>
+                                </div>
+
+                                <br>
+
+                                <label for="">Foto del curso:</label>
                                 <?php if ($txtFoto != "") { ?>
-                                    <img class="img-thumbnail rounded mx-auto d-block" width="100px" src="../../../Sistema/Imagenes/<?=$txtFoto;?>" /><br>
+                                    <img class="img-thumbnail rounded mx-auto d-block" width="100px" src="../../../Sistema/Imagenes/<?= $txtFoto; ?>" /><br>
                                     <br>
                                 <?php } ?>
-                                <input type="file" class="form-control" accept="image/*" name="txtFoto" value="<?= $txtFoto; ?>" placeholder="" id="txt3" require="">
-                                
+                                <input type="file" class="form-control" accept="image/*" name="txtFoto" value="<?= $txtFoto; ?>" placeholder="" id="txt4" require="">
+
                                 <br>
                                 <br>
 
-                                <label for="date">Fecha de publicación:</label><br>
-                                <input type="text" name="fecha" value="<?=date('Y-m-d');?>" readonly="readonly"><br>
-                            
+                                <label for="">Duración del curso:</label>
+                                <input type="text" class="form-control <?php echo (isset($error['Texto'])) ? "is-invalid" : ""; ?>" name="txtDuracion" value="<?= $txtDuracion; ?>" placeholder="" id="txt5" require="">
+                                <div class="invalid-feedback">
+                                    <?php echo (isset($error['Texto'])) ? $error['Texto'] : ""; ?>
+                                </div>
+
+                                <br>
+
+                                <label for="">Fecha de inicio</label>
+                                <input type="date" class="form-control <?php echo (isset($error['Texto'])) ? "is-invalid" : ""; ?>" name="txtFechaInicio" value="<?= $txtFechaInicio; ?>" placeholder="" id="txt6" require="">
+                                <div class="invalid-feedback">
+                                    <?php echo (isset($error['Texto'])) ? $error['Texto'] : ""; ?>
+                                </div>
+
+                                <br>
+
+                                <label for="">Observaciones:</label>
+                                <input type="text" class="form-control <?php echo (isset($error['Texto'])) ? "is-invalid" : ""; ?>" name="txtObservaciones" value="<?= $txtObservaciones; ?>" placeholder="" id="txt7" require="">
+                                <div class="invalid-feedback">
+                                    <?php echo (isset($error['Texto'])) ? $error['Texto'] : ""; ?>
+                                </div>
+
+                                <br>
+
+                                <label for="date">Fecha de publicación del curso:</label><br>
+                                <input type="text" name="fecha" value="<?= date('Y-m-d'); ?>" readonly="readonly"><br>
+
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -85,25 +118,37 @@ require('../../../Sistema/proyeccion/proceso.php');
                 <thead class="thead-dark">
                     <tr>
                         <th>Foto</th>
-                        <th>Texto</th>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                        <th>Duración del curso</th>
+                        <th>Fecha de inicio</th>
+                        <th>Observaciones</th>
                         <th>Fecha de publicación</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <?php foreach ($listaproyeccion as $project) { ?>
+                <?php foreach ($listacursos as $project) { ?>
                     <tr>
                         <td><img class="img-thumbnail" width="100%" src="../../../Sistema/imagenes/<?= $project['Foto']; ?>" /></td>
+                        <td><?php echo $project['course_title']; ?></td>
                         <td><?php echo $project['Texto']; ?></td>
-                        <td><?php echo $project['Fecha'];?></td>
+                        <td><?php echo $project['Foto']; ?></td>
+                        <td><?php echo $project['course_time']; ?></td>
+                        <td><?php echo $project['course_dateStarts']; ?></td>
+                        <td><?php echo $project['course_observation']; ?></td>
+                        <td><?php echo $project['Fecha']; ?></td>
                         <td>
-                            <form action="" method="post">
+                            <form action="" method="POST">
 
                                 <input type="hidden" name="txtID" value="<?php echo $project['ID']; ?>">
 
                                 <input type="submit" value="Seleccionar" class="btn btn-info" name="accion">
-                        <td><button value="btnEliminar" onclick="return Confirmar('¿Realmente deseas borrar?');" type="submit" class="btn btn-danger" name="accion">Eliminar</button></td>
-                        </form>
+                        <td>
+                            <button value="btnEliminar" onclick="return Confirmar('¿Realmente deseas borrar?');" type="submit" class="btn btn-danger" name="accion">Eliminar</button>
                         </td>
+
+                        </form>
+
                     </tr>
                 <?php } ?>
             </table>

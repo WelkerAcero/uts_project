@@ -86,6 +86,12 @@ class Conexion
         return $result;
     }
 
+    public function leer_curso(){
+        $sql = "SELECT * FROM cursos;";
+        $result = mysqli_query($this->conn, $sql);
+        return $result;
+    }
+
     public function leer_admin(){
         $sql = "SELECT * FROM users;";
         $result = mysqli_query($this->conn, $sql);

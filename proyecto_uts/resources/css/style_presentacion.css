@@ -20,7 +20,7 @@ body {
   width: 100%;  
   margin: 1px auto;  
   display: grid; 
-  grid-gap: 30px 0px;
+  grid-gap: 0px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4 auto);
   grid-template-areas:"header_presentacion header_presentacion header_presentacion header_presentacion" 
@@ -44,10 +44,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .contenedor_padre_presentacion .header_presentacion {
   grid-area: header_presentacion;
   width: 100%;
+}
+
+.header_presentacion{
+  margin-bottom:2.2%;
 }
 
 .contenedor_padre_presentacion .carrusel {

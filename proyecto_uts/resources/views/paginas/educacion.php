@@ -18,7 +18,7 @@
         <!-- ================================================================ SECCIÓN MENÚ ====================================================================== -->
         <header class="header">
             <?php
-            include("headerMenu.php")
+            include("../layouts/headerMenu.php")
             ?>
         </header>
         <!-- ================================================================ SECCIÓN OPCIONES EDUCACIÓN ====================================================================== -->
@@ -482,10 +482,10 @@
 
         <footer class="footer">
             <?php
-            require("footerDone.php")
+            require("../layouts/footerDone.php")
             ?>
-
         </footer>
+        
     </div>
 </body>
 
