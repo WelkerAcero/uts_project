@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    /**box-sizing: border-box;**/
+    font-family: 'Playfair Display', serif;
+    /* border: 1px solid red; */
+}
+
+body {
+    background: #E9ECF4;
+    color: #000;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/*====================================================== GRID ==========================================================*/
+
+.contenedor {
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas:"header header header header" 
+                        "contenido contenido contenido contenido" 
+                        "programas programas programas programas" 
+                        "contenido_2 contenido_2 contenido_2 contenido_2" 
+                        "footer footer footer footer";
+}
+
+.contenedor>div, .contenedor .header, .contenedor .contenido, .contenido .footerProgramas {
+    background: #fff;
+    padding-bottom: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .tituloLista{
+    text-align: center;
+    margin-bottom:-20px;
+}
+
+.contenedor .header {
+    color: #fff;
+    grid-area: header; 
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+    margin-left: 15px;
+}
+
+.contenedor .programas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-area: programas;
+    margin-left: 15px;
+    max-width: 100%;   
+}
+
+.programas{
+    display:flex;
+    justify-content: center;
+}
+
+.lista_programas{
+    max-width: 100%;
+    width: 30%;
+    margin: 10px;
+    /* display:flex;
+    flex-direction: column;
+    align-items: center; */
+    border: 1px solid black;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 15px -2px #000000; 
+    box-shadow: 2px 2px 15px -2px #000000;
+}
+
+.lista_programas > div, .programa_titulo{
+    text-align: center;
+    margin-top: 5px;
+    padding:0px 3px;
+}
+
+.lista_programas > div, .programa_descripcion, .programa_tiempo, .programa_inicio, .programa_observacion, .programa_fecha{
+    margin: 5px;
+}
+
+.programa_descripcion{
+    display:flex;
+    justify-content:justify;
+}
+
+.programa_descripcion, .programa_observacion, .programa_fecha{
+    padding:3px 8px;
+}
+
+.lista_programas > #programa_imagen{
+    display: block;
+    margin: auto;
+    width: 365px;
+    height: 200px;
+}
+
+.lista_programas .botonPrograma{
+    display: flex;
+    align-content: flex-end;
+    margin:auto;
+}
+
+.botonPrograma {
+	box-shadow: 0px 1px 0px 0px #1c1b18;
+	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+	background-color:#eae0c2;
+	border-radius:15px;
+	border:2px solid #333029;
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:8px 40px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+    
+}
+.botonPrograma:hover {
+	background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+	background-color:#ccc2a6;
+}
+.botonPrograma:active {
+	position:relative;
+	top:1px;
+}
+
+.contenedor_boton{
+    background:#254361;
+    padding:6px;
+}
+
+.contenedor .contenido_2 {
+    grid-area: contenido_2;
+    margin-left: 15px;
+}
+
+
+.contenedor .imagen-1 {
+    background: rgb(9,111,121);
+    background: whitesmoke;
+    border-radius:40px 0px 40px 0px;
+    border:1px solid black;
+}
+
+.contenedor .footerProgramas {
+    color: #fff;
+    grid-area: footer
+}
+
+/*====================================================== QUERY ==========================================================*/
+
+@media screen and (max-width:768px) {
+    .contenedor {
+        grid-template-areas: "header header header header" 
+                            "contenido contenido contenido contenido"
+                            "programas programas programas programas" 
+                            "contenido_2 contenido_2 contenido_2 contenido_2"                            
+                            "imagen-1 imagen-1 imagen-1 imagen-1" 
+                            "footer footer footer footer";
+    }
+    
+    .map {
+        width: 100%;
+        max-width: 100%;
+    }
+    .uts-imagen-calidad {
+        width: 50%;
+        text-align: center;
+    }
+    .contenedor .contenido {
+        text-align: justify;
+        margin: 10px;
+    }
+    .contenedor .carrusel {
+        margin: 5px;
+    }
+    .contenedor .contenido_2 {
+        text-align: justify;
+        margin: 10px;
+    }
+}
+
+;

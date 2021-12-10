@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*border: 2px solid yellow;*/
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background: white;
+    color: black;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.header{
+    margin: -15px 0px -10px -20px; /*Se arregla el header de Educacion para que se ajuste*/
+}
+
+/*====================================================== GRID ==========================================================*/
+
+.contenedor-padre-educacion {
+    width: 100%;
+    margin: 0px auto;
+    /*margin: 20px auto;*/
+    display: grid;
+    /*grid-gap: 10px;*/
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4 auto);
+    grid-template-areas: "header header header header" "educacion-menu educacion-menu educacion-menu educacion-menu" "footer footer footer footer";
+}
+
+/*====================================================== GRID HEADER ==========================================================*/
+
+.contenedor-padre-educacion>div, .contenedor-padre-educacion .header, .contenedor-padre-educacion .educacion-menu {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor-padre-educacion .header {
+    grid-area: header;
+    display: block;
+    background-image: url("../img/portada2.jpg");
+    background-size: cover;
+    
+}
+
+/*==================================================== GRID MENÚ Y FOOTER ===================================================================*/
+
+.contenedor-padre-educacion .educacion-menu {
+    grid-area: educacion-menu;
+}
+
+.contenedor-padre-educacion .footer {
+    grid-area: footer;
+}
+
+/*====================================================== 1 PESTAÑA CARRUSEL ==========================================================*/
+
+.contenedor-dad-carrusel {
+    width: 100%;
+    max-width: 1500px;
+}
+
+.contacto-educacion {
+    color: black;
+    text-align: justify;
+    margin-top: -500px;
+    background: black;
+    opacity: 0.8;
+    width: 590px;
+    padding: 30px;
+    border-radius: 80px 0px 80px 0px;
+}
+
+.contacto-educacion-href:hover span {
+    color: green;
+}
+
+.slider_1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_1_h1 {
+    font-size: 23px;
+    color: black;
+    text-align: justify;
+    margin-right: 40px;
+    border: 1px solid;
+    padding: 18px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.h2-educacion {
+    font-size: 25px;
+    color: white;
+}
+
+/*====================================================== 1 PESTAÑA OBJETIVOS ==========================================================*/
+
+#icono-1-objetivo:hover {
+    transform: scale(1.3, 1.3) rotate(360deg);
+    transition-duration: 0.8s;
+}
+
+#icono-2-objetivo:hover {
+    transform: scale(1.3, 1.3) rotate(360deg);
+    transition-duration: 0.8s;
+}
+
+#icono-3-objetivo:hover {
+    transform: scale(1.3, 1.3) rotate(360deg);
+    transition-duration: 0.8s;
+}
+
+.objetivo-1:hover {
+    font-size: 35px;
+}
+
+.objetivo-2:hover {
+    font-size: 35px;
+}
+
+.objetivo-3:hover {
+    font-size: 35px;
+}
+
+/*====================================================== 2 PESTAÑA CURSOS ==========================================================*/
+
+#curso_1, #curso_2, #curso_3, #curso_4, #curso_5 {
+    width: 18rem;
+    margin: 0px 60px;
+}
+
+#curso_1:hover {
+    font-size: 23px;
+    color: green;
+    box-shadow: 25px 20px 18px #888888;
+}
+
+#curso_2:hover {
+    font-size: 23px;
+    color: green;
+    box-shadow: 25px 20px 18px #888888;
+}
+
+#curso_3:hover {
+    font-size: 20px;
+    color: green;
+    box-shadow: 25px 20px 18px #888888;
+}
+
+#curso_4:hover {
+    font-size: 23px;
+    color: green;
+    box-shadow: 25px 20px 18px #888888;
+}
+
+#curso_5:hover {
+    font-size: 23px;
+    color: green;
+    box-shadow: 25px 20px 18px #888888;
+}
+
+.myButton {
+    box-shadow: 12px 12px 14px -1px #3e7327;
+    background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+    background-color: #77b55a;
+    border-radius: 14px;
+    border: 4px solid #4b8f29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 6px 59px;
+    text-decoration: none;
+    text-shadow: 3px 4px 0px #5b8a3c;
+}
+
+.myButton:hover {
+    background: #009900;
+    color: wheat;
+    text-decoration: none;
+}
+
+/*====================================================== 3 PESTAÑA  CURSOS CORPORATIVOS ==========================================================*/
+
+#fondo3pestan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 10px;
+    border: green 5px double;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#fondo3pestan {
+    background: url("../img/fondo_3pestana.jpg");
+}
+
+#pest3_1sec {
+    text-align: justify;
+    color: black;
+    padding: 30px;
+}
+
+#pest3_1sec_cursos {
+    text-align: justify;
+    margin: 0px 200px;
+}
+
+#contain-cursos1, #contain-cursos2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+
+#curso-corporativo1, #curso-corporativo2, #curso-corporativo3, #curso-corporativo4, #curso-corporativo5 {
+    width: 22rem;
+    margin: 0px 35px;
+}
+
+/*====================================================== 4 PESTAÑA PROGRAMAS ==========================================================*/
+
+.contenedor-programas {
+    background: url("../../gif/fondo.gif");
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 440px;
+    font-size: 50px;
+}
+
+/*====================================================== 5 PESTAÑA BASICS ==========================================================*/
+
+#fondo-basic {
+    text-align: justify;
+    padding: 25px;
+    border-color: green #003300;
+    border-width: 10px;
+    border-style: solid;
+    font-size: 27px;
+    color: black;
+    text-align: justify;
+    padding: 25px;
+    border-color: green #003300;
+    border-width: 10px;
+    border-style: solid;
+    font-size: 27px;
+    color: black;
+}
+
+#fondo-info1-h1-title {
+    font-size: 22px;
+}
+
+#fondo-info1-h1, #fondo-info1-h12, #fondo-info1-h13 {
+    font-size: 20px;
+}
+
+.fondo-info2-h1-title {
+    font-size: 22px;
+}
+
+/*====================================================== QUERY ==========================================================*/
+
+@media screen and (max-width: 768px) {
+    /*====================================================== QUERY - 1 PESTAÑA - CARRUSEL ==========================================================*/
+    .slider_1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider_1_h1 {
+        font-size: 15px;
+    }
+    .imagen-slider-ejecutivos {
+        width: 300px;
+        height: 300px;
+    }
+    .contacto-educacion {
+        width: 100%;
+        border-radius: 20px;
+    }
+    .contacto-educacion .h1-educacion, .contacto-educacion .h2-educacion {
+        font-size: 20px;
+    }
+    /*====================================================== QUERY - 1 PESTAÑA - OBJETIVOS ==========================================================*/
+    .objetivo-1, .objetivo-2, .objetivo-3 {
+        font-size: 25px;
+    }
+    .objetivo-1:hover {
+        font-size: 27px;
+    }
+    .objetivo-2:hover {
+        font-size: 27px;
+    }
+    .objetivo-3:hover {
+        font-size: 27px;
+    }
+    #icono-1-objetivo, #icono-2-objetivo, #icono-3-objetivo {
+        font-size: 25px;
+    }
+    /*====================================================== QUERY - 2 PESTAÑA - CURSOS ==========================================================*/
+    .pest2_1img {
+        width: 37%;
+    }
+    .pest2_1texto {
+        font-size: 20px;
+    }
+    .pest2_2img {
+        width: 37%;
+    }
+    .pest2_2texto {
+        font-size: 20px;
+    }
+    #curso_1, #curso_2, #curso_3, #curso_4, #curso_5 {
+        margin: 0px 20px;
+        width: 10rem;
+        font-size: 21px;
+    }
+    /*====================================================== QUERY - 3 PESTAÑA - CURSOS ==========================================================*/
+    #pest3_1sec {
+        font-size: 20px;
+        width: 100%;
+    }
+    #pest3_1sec_cursos {
+        text-align: left;
+        margin: 0px 50px;
+    }
+    #contain-cursos1, #contain-cursos2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #curso-corporativo1, #curso-corporativo2, #curso-corporativo3, #curso-corporativo4, #curso-corporativo5 {
+        width: 70%;
+    }
+    /*====================================================== QUERY - 4 PESTAÑA - BASICS ==========================================================*/
+    #fondo-basic {
+        font-size: 22px;
+    }
+    #fondo-info1-h1-title {
+        font-size: 17px;
+    }
+    .fondo-info2-h1-title {
+        font-size: 17px;
+    }
+    #fondo-info1-h1, #fondo-info1-h12, #fondo-info1-h13 {
+        font-size: 15px;
+    }
+    .fondo-info2-h1-title {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 1300px) {
+    .slider_1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .slider_1_h1 {
+        font-size: 18px;
+    }
+    .imagen-slider-ejecutivos {
+        width: 30%;
+        height: 30%;
+    }
+
+}
