@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <link rel="stylesheet" href="../../css/style_HeaderFooter.css">
+    <link rel="stylesheet" href="../../css/style_Header_and_Footer.css">
     <title>Extension UTS</title>
     <?php include('../layouts/plantilla.php'); ?>
 </head>

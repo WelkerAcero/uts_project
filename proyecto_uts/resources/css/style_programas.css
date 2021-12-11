@@ -160,14 +160,21 @@ body {
 
 /*====================================================== QUERY ==========================================================*/
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:700px) {
+
     .contenedor {
-        grid-template-areas: "header header header header" 
+        max-width: 100%;
+        width: 100%;
+        grid-template-areas:"header header header header" 
                             "contenido contenido contenido contenido"
                             "programas programas programas programas" 
                             "contenido_2 contenido_2 contenido_2 contenido_2"                            
-                            "imagen-1 imagen-1 imagen-1 imagen-1" 
                             "footer footer footer footer";
+    }
+
+    .contenedor .header {
+        color: #fff;
+        grid-area: header; 
     }
     
     .map {
@@ -182,11 +189,19 @@ body {
         text-align: justify;
         margin: 10px;
     }
-    .contenedor .carrusel {
-        margin: 5px;
+
+    .contenedor .programas .lista_programas {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       width: 100%;
     }
+
     .contenedor .contenido_2 {
         text-align: justify;
         margin: 10px;
     }
+
+
+
 }

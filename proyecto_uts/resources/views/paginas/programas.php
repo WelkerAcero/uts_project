@@ -49,29 +49,30 @@
                     <img id="programa_imagen" style="" class="img-thumbnail" src="../../../Sistema/Imagenes/<?= $project['Foto']; ?>" />
 
                     <div class="ir_al_programa">
-                        <form class="contenedor_boton" action="<?= $project['course_link'];?>" method="POST">
-                            <button class="botonPrograma" type="submit" name="">Ir al sitio</button>
+                        <form class="contenedor_boton" action="<?= $project['course_link']; ?>" method="POST" target="_blank">
+                            <button class="botonPrograma" type="submit" name="" target="_blank">Ir al sitio</button>
                         </form>
                     </div>
 
                     <p class="programa_descripcion"><?= $project['Texto'] ?></p>
+
                     <hr>
+
                     <ul>
                         <li>
                             <p class="programa_tiempo">Tiempo del curso: <?= $project['course_time'] ?></p>
                         </li>
-                    </ul>
-
-                    <ul>
                         <li>
                             <p class="programa_inicio">Fecha de inicio: <?= $project['course_dateStarts'] ?></p>
                         </li>
                     </ul>
+
                     <hr>
+
                     <p class="programa_observacion">Observaciones: <?= $project['course_observation'] ?></p>
 
                     <p class="programa_fecha">Publicado el: <?= $project['Fecha'] ?></p>
-                   
+
                 </div>
 
             <?php } ?>
@@ -92,7 +93,7 @@
         </div>
 
         <footer class="footerProgramas">
-            <?php include_once("../layouts/footerDone.php"); ?>
+            <?php include_once("../layouts/footerDone.php");?>
         </footer>
 
     </div>
