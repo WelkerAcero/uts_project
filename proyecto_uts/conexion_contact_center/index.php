@@ -21,7 +21,7 @@ unset($_SESSION['consulta']);
     <link rel="stylesheet" type="text/css" href="../librerias/select2/css/select2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <script src="../librerias/jquery-3.6.0.min.js"></script>
+    <script src="../librerias/jquery-3.2.1.min.js"></script>
     <script src="js/funciones.js"></script>
     <script src="../librerias/bootstrap/js/bootstrap.js"></script>
     <script src="../librerias/alertifyjs/alertify.js"></script>
@@ -98,8 +98,8 @@ unset($_SESSION['consulta']);
                     <input type="text" name="" id="contact_emailUpdate" class="form-control input-sm">
                     <label>Celular</label>
                     <input type="number" name="" id="contact_cellphoneUpdate" class="form-control input-sm">
-                    <label>Fecha</label>
-                    <input type="text" id="recorded_dateUpdate" value="<?= date('Y-m-d'); ?>" readonly class="form-control input-sm">
+                    <label>Registrado la fecha</label>
+                    <input type="text" value="<?= date('Y-m-d'); ?>" readonly class="form-control input-sm">
                 </div>
 
                 <div class="modal-footer">

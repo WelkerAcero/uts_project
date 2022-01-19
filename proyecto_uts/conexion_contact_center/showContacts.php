@@ -1,5 +1,5 @@
 <?php
-include("../conexion/conexion.php");
+require_once("../Controllers/contact_centerControllers.php");
 ?>
 
 <div class="row">
@@ -38,29 +38,27 @@ include("../conexion/conexion.php");
                 }
 
                 //se crea una instancia
-                $student = new Conexion();
-                //se llama a la función leer_proveedor() y se guardar en la varibale
-                $listado = $student->leer_contact();
+                $student = new ContactCenterController();
+                //se llama a la función localizada en el controller read() y se guardar en la varibale
+                $listado = $student->read();
 
-                //se realiza el while y se recorren los registros y se guarda en $row
-                while ($ver = mysqli_fetch_row($listado)) {
-                    //se descomponen los campos de la tabla y se guanda en variables
-                    $datos = $ver[0] . "||" . $ver[1] . "||" . $ver[2] . "||" . $ver[3] . "||" . $ver[4];
+                //se realiza el while y se recorren los registros y se guarda en $value
+                foreach($listado as $value){
 
                 ?>
                     <!--se IMPRIME LAS FILAS Y COLUMNAAS CON LOS DATOS DE LA CONSULTA-->
                     <tr>
-                        <td><?php echo $ver[1]; ?></td>
-                        <td><?php echo $ver[2]; ?></td>
-                        <td><?php echo $ver[3]; ?></td>
-                        <td><?php echo $ver[4]; ?></td>
+                        <td style="text-align: center;"><?= $value["contact_name"]; ?></td>
+                        <td style="text-align: center;"><?= $value["contact_email"]; ?></td>
+                        <td style="text-align: center;"><?= $value["contact_cellphone"]; ?></td>
+                        <td style="text-align: center;"><?= $value["recorded_date"]; ?></td>
                         <td>
-                            <button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos ?>')">
+                            <button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?= $datos ?>')">
 
                             </button>
                         </td>
                         <td>
-                            <button class="btn btn-danger glyphicon glyphicon-remove" onclick="preguntarSiNo('<?php echo $ver[0] ?>')">
+                            <button class="btn btn-danger glyphicon glyphicon-remove" onclick="preguntarSiNo('<?= $value['contact_id'] ?>')">
                             </button>
                         </td>
                     </tr>

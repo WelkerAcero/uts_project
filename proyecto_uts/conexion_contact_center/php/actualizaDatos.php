@@ -1,20 +1,14 @@
 <?php
-require_once "../../conexion/conexion.php";
+require_once "../../Controllers/contact_centerController.php";
 //Al entrar a esta carpeta, esta linea 'conexion();' salta error,
 //pero de igual forma sigue funcionando el actualizar correctamente.
-$con = new Conexion();
-$conexion = $con->conectar();
+$model = new ContactCenterController();
 
-$id = $_POST['contact_id'];
-$a = $_POST['contact_name'];
-$b = $_POST['contact_email'];
-$c = $_POST['contact_cellphone'];
-$date = $_POST['recorded_date'];
+$contact_data = array(
+	'contact_id' =>  $_POST['contact_id'],
+	"contact_name" => $_POST['contact_name'],
+	"contact_email" => $_POST['contact_email'],
+	"contact_cellphone" =>  $_POST['contact_cellphone'],
+);
 
-$sql = "UPDATE contact_center SET contact_name='$a',
-								contact_email='$b',
-								contact_cellphone='$c',
-								recorded_date='$date'
-								WHERE contact_id='$id'";
-
-echo $result = mysqli_query($conexion, $sql);
+$model->update($contact_data);

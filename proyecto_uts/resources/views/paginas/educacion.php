@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <?php include('../layouts/plantilla.php') ?>
-   
 </head>
 
 <body>
@@ -57,8 +56,10 @@
                                                 <h1 class="slider_1_h1">
                                                     <b>UNIDAD DE EDUCACIÓN CONTINUA</b>
                                                     <br><br>
-                                                    Es el área encargada de diseñar y desarrollar la oferta de capacitación con el propósito de actualizar, profundizar, y mejorar los conocimientos adquiridos en los procesos formativos de las
-                                                    diferentes comunidades y en los diferentes sectores económicos. 
+                                                    Es el área encargada de diseñar y desarrollar la oferta de capacitación 
+                                                    con el propósito de actualizar, profundizar, y mejorar los conocimientos 
+                                                    adquiridos en los procesos formativos de las diferentes comunidades y en
+                                                    los diferentes sectores económicos. 
                                                 </h1>
                                                 <img class="imagen-slider-ejecutivos" src="../../img/ejecutivos.png" style="border-radius:120px;" height="420px">
                                             </div>
@@ -94,31 +95,36 @@
                         </section>
                     </div>
 
-                    <div style="color:black;">
+                    <div class="objetivos" style="color:black;">
                         <br>
                         <h1 style="text-align:center;">OBJETIVOS</h1>
                         <hr style="border: 1px dashed green;">
-                        <div style=" display:flex; justify-content:center; align-items:center;">
-                            <i id="icono-1-objetivo" class="fas fa-chalkboard-teacher fa-3x" style="color: #2471A3; background:black; border-radius:100px; padding:20px; width:8%;"></i>
+
+                        <div class="objetivo_1">
+                            <i id="icono-1-objetivo" class="fas fa-chalkboard-teacher fa-3x"></i>
                             <h2 class="objetivo-1" style="padding:11px; margin-left:20px; text-align: center; box-shadow: 0px 10px 48px #888888;">Oferta de cursos, seminarios, talleres, diplomados desde todos los programas académicos.</h2>
                         </div>
+
                         <br>
-                        <div style=" display:flex; justify-content:center; align-items:center;">
-                            <i id="icono-2-objetivo" class="fas fa-flask fa-3x" style="color: #2471A3; background:black; border-radius:100px; padding:20px; width:8%;"></i>
+
+                        <div class="objetivo_2">
+                            <i id="icono-2-objetivo" class="fas fa-flask fa-3x" ></i>
                             <h2 class="objetivo-2" style="padding:11px; margin-left:20px; text-align: center; box-shadow: 0px 10px 48px #888888;">Contribuir a la actualización científica, técnica y humanística de los profesionales, líderes y de la comunidad en general.</h2>
                         </div>
+
                         <br>
-                        <div style=" display:flex; align-items:center;">
-                            <i id="icono-3-objetivo" class="fas fa-brain fa-3x" style="color: #2471A3; background:black; border-radius:100px; padding:20px; width:7%;"></i>
+
+                        <div class="objetivo_3">
+                            <i id="icono-3-objetivo" class="fas fa-brain fa-3x"></i>
                             <h2 class="objetivo-3" style="padding:11px; margin-left:20px; text-align: center; box-shadow: 0px 10px 48px #888888;">Promover para toda la comunidad el desarrollo de conocimientos y destrezas específicas.</h2>
                         </div>
 
                         <br>
                     </div>
 
-                    <div style="background:black; color:white; text-align:center;">
+                    <div class="programas_mentioned_div" style="background:black; color:white; text-align:center;">
                         <br>
-                        <h1>Programas de Educación Continua</h1>
+                        <h1  style="text-align:center;">Programas de Educación Continua</h1>
                         <hr style="border: 2px dashed green;">
                         <div style=" display:flex; justify-content:center; align-items:center;">
                             <i class="fas fa-ellipsis-h fa-3x" style="color: green;"></i>
@@ -454,7 +460,7 @@
                                                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon fa-3x"></i></span>
                                                 <div class="col-md-9">
                                                     <b> Teléfono:</b><input id="phone" name="phone" type="text" placeholder="Digitar teléfono/celular" required class="form-control">
-                                                    <input id="date" name="date" type="text" hidden="true" value="<?=date('Y-m-d')?>" required class="form-control">
+                                                    <!-- <input id="date" name="date" type="text" hidden="true" value="<?=date('Y-m-d')?>" required class="form-control"> -->
                                                 </div>
                                             </div>
                                             <br>

@@ -57,6 +57,14 @@ body {
 
 /*====================================================== 1 PESTAÑA CARRUSEL ==========================================================*/
 
+.contenedor-dad-carrusel{
+    width:100%;
+}
+
+.contenedor-dad-carrusel > .carousel-inner > img{
+    height: 500px;
+}
+
 .contenedor-dad-carrusel {
     width: 100%;
     max-width: 1500px;
@@ -101,6 +109,18 @@ body {
 }
 
 /*====================================================== 1 PESTAÑA OBJETIVOS ==========================================================*/
+.objetivos > .objetivo_1, .objetivo_2, .objetivo_3{
+    display:flex; 
+    justify-content:center; 
+    align-items:center;
+}
+
+#icono-1-objetivo, #icono-2-objetivo, #icono-3-objetivo{
+    color: #2471A3; 
+    background:black;
+    border-radius:100px; 
+    padding:20px; width:7%;
+}
 
 #icono-1-objetivo:hover {
     transform: scale(1.3, 1.3) rotate(360deg);
@@ -275,32 +295,62 @@ body {
 
 /*====================================================== QUERY ==========================================================*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 736px) {
     /*====================================================== QUERY - 1 PESTAÑA - CARRUSEL ==========================================================*/
+    .educacion-menu{
+        max-width: 700px;
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+    .educacion-menu > .a{
+        
+    }
     .slider_1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .slider_1_h1 {
         font-size: 15px;
     }
+
     .imagen-slider-ejecutivos {
         width: 300px;
         height: 300px;
     }
+
     .contacto-educacion {
         width: 100%;
         border-radius: 20px;
     }
+
     .contacto-educacion .h1-educacion, .contacto-educacion .h2-educacion {
         font-size: 20px;
     }
+
     /*====================================================== QUERY - 1 PESTAÑA - OBJETIVOS ==========================================================*/
-    .objetivo-1, .objetivo-2, .objetivo-3 {
-        font-size: 25px;
+    .objetivos > .objetivo_1, .objetivo_2, .objetivo_3{
+        display:flex; 
+        justify-content:flex-start; 
+        align-items:center;
     }
+
+    #icono-1-objetivo, #icono-2-objetivo, #icono-3-objetivo{
+        color: #2471A3; 
+        background:black; 
+        border-radius:100px; 
+        padding:20px; width:7%;
+    }
+    
+    .objetivo-1, .objetivo-2, .objetivo-3 {
+        font-size: 20px;    
+        width: 60%;
+    }
+
     .objetivo-1:hover {
         font-size: 27px;
     }
@@ -312,6 +362,13 @@ body {
     }
     #icono-1-objetivo, #icono-2-objetivo, #icono-3-objetivo {
         font-size: 25px;
+    }
+
+    .programas_mentioned_div > h1{
+        font-size: 20px;
+        width: 82%;
+        display:block;
+        margin:auto;
     }
     /*====================================================== QUERY - 2 PESTAÑA - CURSOS ==========================================================*/
     .pest2_1img {

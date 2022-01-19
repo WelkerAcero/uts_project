@@ -1,12 +1,14 @@
 <?php
-include("../conexion/conexion.php");
+include("../Controllers/contact_centerController.php");
 //se crea una nueva instancia
-$student = new Conexion();
+$student = new ContactCenterController();
+
 //isset() para comprobar si una variable está definida -- !empty si no viene null
 if (isset($_POST) && !empty($_POST)) {
     $dataToString = "";
     $dataStored = [];
-    $data = $student->leer_contact();
+    $data = $student->read();
+    $numOfData = count($data);
     foreach ($data as $key => $value) {
         $dataStored[] = implode(",", $value);
     }
@@ -21,13 +23,14 @@ if (isset($_POST) && !empty($_POST)) {
         </script>';
     } else {
         //se llama la función insertar y se le pasan los parámetros del formulario
-        $res = $student->insertar_contact(
-            $_POST['name'],
-            $_POST['email'],
-            $_POST['phone'],
-            $_POST['date'],
+        $student_data = array(
+            "contact_id" => $numOfData+1,
+            "contact_name" => $_POST['name'],
+            "contact_email" => $_POST['email'],
+            "contact_cellphone" => $_POST['phone'],
         );
 
+        $res = $student->create($student_data);
     }
     
         //si el resultado es true o 1, quiere decir que insertó en la base de datos

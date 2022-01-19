@@ -1,9 +1,10 @@
 <?php
 
-require_once "../../conexion/conexion.php";
+require_once "../../Controllers/contact_centerController.php";
 
-$con = new Conexion();
-$conexion = $con->conectar();
+$con = new ContactCenterController();
+$getData = $con->read();
+$totalDataStored = count($getData);
 
 $a = strtolower($_POST['contact_name']);
 $a2 = ucwords($a);
@@ -11,7 +12,11 @@ $b = strtolower($_POST['contact_email']);
 $c = $_POST['contact_cellphone'];
 $date = $_POST['recorded_date'];
 
+$createArray = array(
+	'contact_id' => $totalDataStored+1,
+	'contact_name' => $a2,
+	'contact_email' => $b,
+	'contact_cellphone' =>$c,
+);
 
-$sql = "INSERT INTO contact_center (contact_name, contact_email, contact_cellphone, recorded_date)
-								VALUES ('$a2','$b','$c','$date')";
-echo $result = mysqli_query($conexion, $sql);
+$con->create($createArray);

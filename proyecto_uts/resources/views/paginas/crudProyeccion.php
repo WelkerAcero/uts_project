@@ -1,5 +1,5 @@
 <?php
-require('../../../Sistema/proyeccion/proceso.php');
+require_once('../../../Sistema/proyeccion/proceso.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@ require('../../../Sistema/proyeccion/proceso.php');
     cuando se haya loggeado-->
     <div class="bienvenida" style="margin:-25px">
         <?php
-        require("../../../php-login/index.php");
+        include_once("../../../php-login/index.php");
         ?>
     </div>
 

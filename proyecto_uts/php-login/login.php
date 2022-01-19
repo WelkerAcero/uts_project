@@ -31,7 +31,7 @@ if (!empty($_POST['email']) && strpos($_POST['email'], ' ')) {
 
         if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
             $_SESSION['user_id'] = $results['id'];
-            $_SESSION['login_date'] = time();
+            $_SESSION['login_date'] = date('Y m d H:i:s');
             header("Location: ../resources/views/paginas/adminPage.php");
         } else {
             $message = 'Estas credenciales no son válidas, intente nuevamente';

@@ -1,8 +1,7 @@
 <?php
 session_start();
-require_once "../../conexion/conexion.php";
-$con = new Conexion();
-$conexion = $con->conectar();
+require_once("../../Controllers/contact_centerController.php");
+$con = new ContactCenterController();
 
 ?>
 <div class="row">
@@ -17,10 +16,11 @@ $conexion = $con->conectar();
 		<table class="table table-hover table-condensed table-bordered">
 
 			<tr>
-				<td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>NOMBRE</b></td>
-				<td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>EMAIL</b></td>
-				<td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>CELULAR</b></td>
-				<td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>FECHA DEL REGISTRO</b></td>
+				<td style="font-size: 15px; background-color:black; color: white; text-align: center; vertical-align:middle"><b>NOMBRE</b></td>
+				<td style="font-size: 15px; background-color:black; color: white; text-align: center; vertical-align:middle"><b>EMAIL</b></td>
+				<td style="font-size: 15px; background-color:black; color: white; text-align: center; vertical-align:middle"><b>CELULAR</b></td>
+				<td style="font-size: 15px; background-color:black; color: white; text-align: center; vertical-align:middle"><b>FECHA DEL REGISTRO</b></td>
+				<td style="font-size: 15px; background-color:black; color: white; text-align: center; vertical-align:middle"><b>FECHA DE ÚLTIMA ACTUALIZACiÓN</b></td>
 
 				<td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>EDITAR</b></td>
 				<td style="font-size: 15px; background-color:black; color: white; text-align: center;"><b>ELIMINAR</b></td>
@@ -39,27 +39,28 @@ $conexion = $con->conectar();
 				$sql = "SELECT * from contact_center";
 			}
 
-			$result = mysqli_query($conexion, $sql);
-			while ($ver = mysqli_fetch_row($result)) {
+			$result = $con->read();
+			foreach($result as $field => $ver) {
 
-				$datos = $ver[0] . "||" . $ver[1] . "||" . $ver[2] . "||" . $ver[3] . "||" . $ver[4];
+				$datos = $ver["contact_id"] . "||" . $ver["contact_name"] . "||" . $ver["contact_email"] . "||" . $ver["contact_cellphone"] . "||" . $ver["recorded_date"];
 
 			?>
 
 				<tr>
-					<td><?php echo $ver[1] ?></td>
-					<td><?php echo $ver[2] ?></td>
-					<td><?php echo $ver[3] ?></td>
-					<td><?php echo $ver[4] ?></td>
+					<td style="text-align: center;"><?=  $ver["contact_name"];?></td>
+					<td style="text-align: center;"><?=  $ver["contact_email"]; ?></td>
+					<td style="text-align: center;"><?=  $ver["contact_cellphone"];  ?></td>
+					<td style="text-align: center;"><?=  $ver["recorded_date"]; ?></td>
+					<td style="text-align: center;"><?=  $ver["last_update"]; ?></td>
 
 					
 					<td>
-						<button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos ?>')">
+						<button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?= $datos ?>')">
 
 						</button>
 					</td>
 					<td>
-						<button class="btn btn-danger glyphicon glyphicon-remove" onclick="preguntarSiNo('<?php echo $ver[0] ?>')">
+						<button class="btn btn-danger glyphicon glyphicon-remove" onclick="preguntarSiNo('<?= $ver['contact_id'] ?>')">
 						</button>
 					</td>
 				</tr>
@@ -71,3 +72,4 @@ $conexion = $con->conectar();
 		</table>
 	</div>
 </div>
+

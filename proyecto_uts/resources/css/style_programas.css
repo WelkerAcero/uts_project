@@ -17,7 +17,7 @@ body {
 
 .contenedor {
     width: 100%;
-    margin: 10px auto;
+    margin: 0px auto;
     display: grid;
     grid-gap: 0px;
     grid-template-columns: repeat(4, 1fr);
@@ -31,7 +31,7 @@ body {
 
 .contenedor>div, .contenedor .header, .contenedor .contenido, .contenido .footerProgramas {
     background: #fff;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     border-radius: 4px;
 }
 
@@ -155,7 +155,7 @@ body {
 
 .contenedor .footerProgramas {
     color: #fff;
-    grid-area: footer
+    grid-area: footer;
 }
 
 /*====================================================== QUERY ==========================================================*/

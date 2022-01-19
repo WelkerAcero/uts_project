@@ -42,14 +42,12 @@ function actualizaDatos() {
 	contact_name = $('#contact_nameUpdate').val();
 	contact_email = $('#contact_emailUpdate').val();
 	contact_cellphone = $('#contact_cellphoneUpdate').val();
-	recorded_date = $('#recorded_dateUpdate').val();
 
 	cadena = "contact_id=" + contact_id +
 		"&contact_name=" + contact_name +
 		"&contact_email=" + contact_email +
-		"&contact_cellphone=" + contact_cellphone +
-		"&recorded_date=" + recorded_date;
-
+		"&contact_cellphone=" + contact_cellphone;
+	
 	$.ajax({
 		type: "POST",
 		url: "php/actualizaDatos.php",
